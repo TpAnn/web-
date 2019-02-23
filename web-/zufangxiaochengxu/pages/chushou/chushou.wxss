@@ -1,0 +1,561 @@
+page{
+    width:100%;
+    background-color: #F3F3F3;
+}
+.top{
+    margin-top:20rpx;
+}
+.topbg{
+    background-color:#fff;
+}
+.top .bg{
+    height: 100rpx;
+    line-height: 100rpx;
+    vertical-align: middle; 
+    color:#333;
+    background-color: #fff;
+    width:96%;
+    margin:auto;
+    border-bottom:1rpx solid #eee;
+}
+.top .bg.lastbg{
+    border-bottom:0;
+}
+.bg .title{
+    float:left;
+    margin-left:20rpx;
+}
+.bg .content{
+    float:right;
+    margin-right:20rpx;
+}
+.bg .content.codecontent{
+    width:400rpx;
+}
+.bg .content picker{
+    float:left;
+}
+.bg .content text{
+    margin-right:20rpx;
+}
+.bg .content image{
+    width:40rpx;
+    height: 40rpx;
+    display: block;
+    float:right;
+    margin-top:32rpx;
+}
+.bg .content input{
+    text-align: right;
+    height: 100rpx;
+    float:left;
+    padding-right:10rpx;
+}
+.bg .content input.shoujia{
+    width:200rpx;
+}
+.bg .content input.mianji{
+    width:200rpx;
+}
+.bg .content input.contactnameinput{
+    width:200rpx;
+    padding-right:20rpx;
+    border-right:1rpx solid #eee;
+}
+.bg .content .radio-group{
+    float:right;
+    margin-left:20rpx;
+}
+.bg .content.phone{
+   position: relative;
+}
+.bg .content input.phonenumber{
+    width:240rpx;
+    margin-right:200rpx;
+}
+.bg .content .phoneview{
+    display: inline;
+}
+.bg .content text.phonenumbertext{
+    position: absolute;
+    z-index: 1;
+    right:0;
+    top:0;
+    margin-right:0;
+    font-size:28rpx;
+}
+.bg .content input.codeinput{
+    float:right;
+}
+.countimage{
+    width:90%;
+    margin:4% auto;
+    position:relative;
+}
+.coinput {
+    width:100%;
+    height:200rpx;
+    border:1px #e8e8e8 solid;
+    background:#ccc;
+    float:left;
+    text-align:center;
+    font-size:32rpx;
+    color:#999;
+    line-height:200rpx;
+     margin-bottom:10rpx; 
+}
+.cofile {
+    width:46%;
+    height:200rpx;
+    float:left;
+    text-align:center;
+    margin-right:4%;
+    margin-bottom:4%;
+    box-sizing:border-box;
+    padding-top:20rpx;
+    border:1px #e8e8e8 solid;
+}
+.cofile image{
+    width:80%;
+    height:80%;
+}
+.center{
+    margin-top:20rpx;
+}
+.center checkbox-group{
+    text-align: center;
+    height: 56rpx;
+    line-height: 56rpx;
+}
+.center checkbox-group label{
+    height: 56rpx;
+    font-size:32rpx;
+    color:#999;
+}
+.center checkbox-group label text{
+    color:#999;
+    font-size:24rpx;
+    margin-left: 10rpx;
+}
+.center checkbox-group checkbox{
+    zoom:60%;   
+}
+.center button{
+    border:0;
+    border-radius: 20rpx;
+    background-color: #02A9FF;
+    width:90%;
+    margin:auto;
+    margin-top:20rpx;
+    color:#fff;
+}
+.bottom{
+    margin-top:100rpx;
+    margin-bottom:100rpx;
+}
+.bottom .title{
+    text-align: center;
+    color:#999;
+    font-size:32rpx;
+    height: 42rpx;
+}
+.bottom .title view{
+    width:120rpx;
+    height: 2rpx;
+    display: inline-block;
+    background-color: #999;
+    margin-bottom:10rpx;
+}
+.bottom .title .left{
+    margin-right:20rpx;
+}
+.bottom .title .right{
+    margin-left:20rpx;
+}
+.bottom .content{
+    height: 120rpx;
+    margin-top:100rpx;
+}
+.bottom .content image{
+    width:100%;
+    height: 120rpx;
+}
+/* 遮盖层 */
+.zhegaiceng{
+    width:100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    background-color:#000;
+    opacity: 0.7;
+    z-index: 1;
+}
+/* 点击显示装修 */
+.showzhuangxiu{
+    width:100%;
+    float:left;
+    position: fixed;
+    bottom:0;
+    z-index: 2;
+    background-color:#fff;
+    padding-bottom:40rpx;
+}
+.showzhuangxiu .title{
+    width:100%;
+    float:left;
+}
+.showzhuangxiu .title view{
+    margin-top:20rpx;
+}
+.showzhuangxiu .title .titleleft{
+    float:left;
+    margin-left:20rpx;
+}
+.showzhuangxiu .title .titleright{
+    float:right;
+    margin-right:20rpx;
+}
+.showzhuangxiu .title view text{
+    font-size:32rpx;
+}
+.showzhuangxiu .title .titleleft text{
+    color:#999;
+}
+.showzhuangxiu .title .titleright text{
+    color:#51C332;
+}
+.zhuangxiucontent{
+    width:100%;
+    float:left;
+    margin-top:20rpx;
+}
+.zhuangxiucontent view{
+    float:left;
+    width:30%;
+    height: 80rpx;
+    line-height: 1;
+    margin-left:2%;
+    margin-top:20rpx;
+    border:2rpx solid #999;
+    text-align: center;
+}
+.zhuangxiucontent view.zhuangxiuselected{
+    border:2rpx solid #51C332;
+    color:#02A9FF;
+}
+.zhuangxiucontent view text{
+    font-size:24rpx;
+    display: block;
+    padding-top:32rpx;
+    padding-bottom:32rpx;
+    padding-left:10rpx;
+    padding-right:10rpx;
+}
+/* 点击显示户型 */
+.showhuxing{
+    width:100%;
+    float:left;
+    position: fixed;
+    bottom:0;
+    z-index: 2;
+    background-color:#fff;
+    padding-bottom:40rpx;
+}
+.showhuxing .title{
+    width:100%;
+    float:left;
+}
+.showhuxing .title view{
+    margin-top:20rpx;
+}
+.showhuxing .title .titleleft{
+    float:left;
+    margin-left:20rpx;
+}
+.showhuxing .title .titleright{
+    float:right;
+    margin-right:20rpx;
+}
+.showhuxing .title view text{
+    font-size:32rpx;
+}
+.showhuxing .title .titleleft text{
+    color:#999;
+}
+.showhuxing .title .titleright text{
+    color:#51C332;
+}
+.huxingcontent{
+    width:100%;
+    float:left;
+    margin-top:20rpx;
+}
+.huxingcontent view{
+    float:left;
+    width:30%;
+    height: 80rpx;
+    line-height: 1;
+    margin-left:2%;
+    margin-top:20rpx;
+    border:2rpx solid #999;
+    text-align: center;
+}
+.huxingcontent view.huxingelected{
+    border:2rpx solid #51C332;
+    color:#02A9FF;
+}
+.huxingcontent view text{
+    font-size:24rpx;
+    display: block;
+    padding-top:32rpx;
+    padding-bottom:32rpx;
+    padding-left:10rpx;
+    padding-right:10rpx;
+}
+/* 点击显示朝向 */
+.showchaoxiang{
+    width:100%;
+    float:left;
+    position: fixed;
+    bottom:0;
+    z-index: 2;
+    background-color:#fff;
+    padding-bottom:40rpx;
+}
+.showchaoxiang .title  {
+    width:100%;
+    float:left;
+}
+.showchaoxiang .title view  {
+    margin-top:20rpx;
+}
+.showchaoxiang .title .titleleft {
+    float:left;
+    margin-left:20rpx;
+}
+.showchaoxiang .title .titleright {
+    float:right;
+    margin-right:20rpx;
+}
+.showchaoxiang .title view text {
+    font-size:32rpx;
+}
+.showchaoxiang .title .titleleft text {
+    color:#999;
+}
+.showchaoxiang .title .titleright text{
+    color:#51C332;
+}
+.chaoxiangcontent{
+    width:100%;
+    float:left;
+    margin-top:20rpx;
+}
+.chaoxiangcontent view{
+    float:left;
+    width:30%;
+    height: 80rpx;
+    line-height: 1;
+    margin-left:2%;
+    margin-top:20rpx;
+    border:2rpx solid #999;
+    text-align: center;
+}
+.chaoxiangcontent view.chaoxiangselected{
+    border:2rpx solid #51C332;
+    color:#02A9FF;
+}
+.chaoxiangcontent view text{
+    font-size:24rpx;
+    display: block;
+    padding-top:32rpx;
+    padding-bottom:32rpx;
+    padding-left:10rpx;
+    padding-right:10rpx;
+}
+/*--点击显示年代--*/
+.showtime{
+     width:100%;
+    float:left;
+    position: fixed;
+    bottom:0;
+    z-index: 2;
+    background-color:#fff;
+    padding-bottom:40rpx;
+}
+.showtime .title  {
+    width:100%;
+    float:left;
+}
+.showtime .title view  {
+    margin-top:20rpx;
+}
+.showtime .title .titleleft {
+    float:left;
+    margin-left:20rpx;
+}
+.showtime .title .titleright {
+    float:right;
+    margin-right:20rpx;
+}
+.showtime .title view text {
+    font-size:32rpx;
+}
+.showtime .title .titleleft text {
+    color:#999;
+}
+.showtime .title .titleright text{
+    color:#51C332;
+}
+.timecontent{
+    width:100%;
+    float:left;
+    margin-top:20rpx;
+}
+.timecontent view{
+    float:left;
+    width:30%;
+    height: 80rpx;
+    line-height: 1;
+    margin-left:2%;
+    margin-top:20rpx;
+    border:2rpx solid #999;
+    text-align: center;
+}
+.timecontent view.chaoxiangselected{
+    border:2rpx solid #51C332;
+    color:#02A9FF;
+}
+.timecontent view text{
+    font-size:24rpx;
+    display: block;
+    padding-top:32rpx;
+    padding-bottom:32rpx;
+    padding-left:10rpx;
+    padding-right:10rpx;
+}
+
+/*--点击显示类型--*/
+.showtypes{
+     width:100%;
+    float:left;
+    position: fixed;
+    bottom:0;
+    z-index: 2;
+    background-color:#fff;
+    padding-bottom:40rpx;
+}
+.showtypes .title  {
+    width:100%;
+    float:left;
+}
+.showtypes .title view  {
+    margin-top:20rpx;
+}
+.showtypes .title .titleleft {
+    float:left;
+    margin-left:20rpx;
+}
+.showtypes .title .titleright {
+    float:right;
+    margin-right:20rpx;
+}
+.showtypes .title view text {
+    font-size:32rpx;
+}
+.showtypes .title .titleleft text {
+    color:#999;
+}
+.showtypes .title .titleright text{
+    color:#51C332;
+}
+.typescontent{
+    width:100%;
+    float:left;
+    margin-top:20rpx;
+}
+.typescontent view{
+    float:left;
+    width:30%;
+    height: 80rpx;
+    line-height: 1;
+    margin-left:2%;
+    margin-top:20rpx;
+    border:2rpx solid #999;
+    text-align: center;
+}
+.typescontent view.chaoxiangselected{
+    border:2rpx solid #51C332;
+    color:#02A9FF;
+}
+.typescontent view text{
+    font-size:24rpx;
+    display: block;
+    padding-top:32rpx;
+    padding-bottom:32rpx;
+    padding-left:10rpx;
+    padding-right:10rpx;
+}
+
+/*--点击显示小区--*/
+.showplot{
+     width:100%;
+    float:left;
+    position: fixed;
+    bottom:0;
+    z-index: 2;
+    background-color:#fff;
+    padding-bottom:40rpx;
+}
+.showplot .title  {
+    width:100%;
+    float:left;
+}
+.showplot .title view  {
+    margin-top:20rpx;
+}
+.showplot .title .titleleft {
+    float:left;
+    margin-left:20rpx;
+}
+.showplot .title .titleright {
+    float:right;
+    margin-right:20rpx;
+}
+.showplot .title view text {
+    font-size:32rpx;
+}
+.showplot .title .titleleft text {
+    color:#999;
+}
+.showplot .title .titleright text{
+    color:#51C332;
+}
+.plotcontent{
+    width:100%;
+    float:left;
+    margin-top:20rpx;
+}
+.plotcontent view{
+    float:left;
+    width:30%;
+    height: 80rpx;
+    line-height: 1;
+    margin-left:2%;
+    margin-top:20rpx;
+    border:2rpx solid #999;
+    text-align: center;
+}
+.plotcontent view.chaoxiangselected{
+    border:2rpx solid #51C332;
+    color:#02A9FF;
+}
+.plotcontent view text{
+    font-size:24rpx;
+    display: block;
+    padding-top:32rpx;
+    padding-bottom:32rpx;
+    padding-left:10rpx;
+    padding-right:10rpx;
+}
+

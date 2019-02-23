@@ -1,0 +1,425 @@
+page{
+    width:100%;
+    height: 100%;
+    background-color: #F3F3F3;
+}
+.top{
+    padding-top:20rpx;
+}
+.topbg{
+    background-color:#fff;
+}
+.top .bg{
+    height: 100rpx;
+    line-height: 100rpx;
+    vertical-align: middle; 
+    color:#333;
+    background-color: #fff;
+    width:96%;
+    margin:auto;
+    border-bottom:1rpx solid #eee;
+}
+.bg .title{
+    float:left;
+    margin-left:20rpx;
+}
+.bg .content{
+    float:right;
+    margin-right:20rpx;
+}
+.bg .content picker{
+    float:left;
+}
+.bg .content text{
+    margin-right:20rpx;
+}
+.bg .content image{
+    width:40rpx;
+    height: 40rpx;
+    display: block;
+    float:right;
+    margin-top:32rpx;
+}
+.bg .content input{
+    text-align: right;
+    height: 100rpx;
+    float:left;
+    padding-right:10rpx;
+}
+.bg .content input.danyuan,
+.bg .content input.louceng,
+.bg .content input.fanghao{
+    width:200rpx;
+}
+.center{
+    margin-top:20rpx;
+}
+.center .next{
+    text-align: center;
+    color:#333;
+    font-size:32rpx;
+}
+.center .nextbutton{
+    height: 92rpx;
+    margin-top:20rpx;
+}
+.nextbutton button{
+    width:46%;
+    height: 92rpx;
+    border:0;
+    border-radius: 20rpx;
+    background-color: #02A9FF;
+    color:#fff;
+    text-align: center;
+}
+.bottom{
+    margin-top:100rpx;
+}
+.bottom .title{
+    text-align: center;
+    color:#999;
+    font-size:32rpx;
+    height: 42rpx;
+}
+.bottom .title view{
+    width:120rpx;
+    height: 2rpx;
+    display: inline-block;
+    background-color: #999;
+    margin-bottom:10rpx;
+}
+.bottom .title .left{
+    margin-right:20rpx;
+}
+.bottom .title .right{
+    margin-left:20rpx;
+}
+.bottom .content{
+    height: 120rpx;
+    margin-top:100rpx;
+}
+.bottom .content image{
+    width:100%;
+    height: 120rpx;
+}
+
+/* 点击搜索显示小区 */
+.container.containersearcharea{
+    background-color:#fff;
+}
+.top.topsearcharea{
+    width:100%;
+    float:left;
+    margin-top:0 !important;
+    padding-top:20rpx;
+    padding-bottom:20rpx;
+    background-color:#f3f3f3;
+}
+.top .focustopsearch{
+    width:80%;
+    margin:0;
+    float:left;
+    margin-left:20rpx;
+    border:0;
+    background-color:#e6e6e6;
+    border-radius:8rpx;
+}
+.top .cancel{
+    float:right;
+    width:16%;
+    text-align:center;
+    height:64rpx;
+
+}
+.top .cancel text{
+    font-size:28rpx;
+}
+.focustopsearch .specinput{
+    float:left;
+    margin-left:30rpx;
+}
+.focustopsearch .specinput input{
+    width:65vw;
+    margin-top:6rpx;
+}
+.focustopsearch .specimage{
+    float:left;
+    margin-left:20rpx;
+    height:64rpx;
+
+}
+.focustopsearch .specimage image{
+    width:40rpx;
+    height:40rpx;
+    margin-top:12rpx;
+}
+.showcontent{
+    width:96%;
+    height: 105rpx;
+    margin:20rpx auto 0 auto;
+    background-color:#fff;
+    border-bottom:2rpx solid #eee;
+}
+.showcontent text{
+    margin-left:20rpx;
+    display: block;
+    font-size:28rpx;
+}
+.showcontent text:last-child{
+    margin-top:10rpx;
+    color:#ccc;
+}
+/* 遮盖层 */
+.zhegaiceng{
+    width:100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    background-color:#000;
+    opacity: 0.7;
+    z-index: 1;
+}
+/* 点击显示楼栋号 */
+.showloudong{
+    width:100%;
+    float:left;
+    position: fixed;
+    bottom:0;
+    z-index: 2;
+    background-color:#fff;
+    padding-bottom:40rpx;
+}
+.showloudong .title{
+    width:100%;
+    float:left;
+}
+.showloudong .title view{
+    margin-top:20rpx;
+}
+.showloudong .title .titleleft{
+    float:left;
+    margin-left:20rpx;
+}
+.showloudong .title .titleright{
+    float:right;
+    margin-right:20rpx;
+}
+.showloudong .title view text{
+    font-size:32rpx;
+}
+.showloudong .title .titleleft text{
+    color:#999;
+}
+.showloudong .title .titleright text{
+    color:#51C332;
+}
+.loudongcontent{
+    width:100%;
+    float:left;
+    margin-top:20rpx;
+}
+.loudongcontent view{
+    float:left;
+    width:30%;
+    height: 80rpx;
+    line-height: 1;
+    margin-left:2%;
+    margin-top:20rpx;
+    border:2rpx solid #999;
+    text-align: center;
+}
+.loudongcontent view.loudongselected{
+    border:2rpx solid #51C332;
+    color:#02A9FF;
+}
+.loudongcontent view text{
+    font-size:24rpx;
+    display: block;
+    padding-top:32rpx;
+    padding-bottom:32rpx;
+    padding-left:10rpx;
+    padding-right:10rpx;
+}
+/* 点击显示单元号 */
+.showdanyuanhao{
+    width:100%;
+    float:left;
+    position: fixed;
+    bottom:0;
+    z-index: 2;
+    background-color:#fff;
+    padding-bottom:40rpx;
+}
+.showdanyuanhao .title{
+    width:100%;
+    float:left;
+}
+.showdanyuanhao .title view{
+    margin-top:20rpx;
+}
+.showdanyuanhao .title .titleleft{
+    float:left;
+    margin-left:20rpx;
+}
+.showdanyuanhao .title .titleright{
+    float:right;
+    margin-right:20rpx;
+}
+.showdanyuanhao .title view text{
+    font-size:32rpx;
+}
+.showdanyuanhao .title .titleleft text{
+    color:#999;
+}
+.showdanyuanhao .title .titleright text{
+    color:#51C332;
+}
+.danyuanhaocontent{
+    width:100%;
+    float:left;
+    margin-top:20rpx;
+}
+.danyuanhaocontent view{
+    float:left;
+    width:30%;
+    height: 80rpx;
+    line-height: 1;
+    margin-left:2%;
+    margin-top:20rpx;
+    border:2rpx solid #999;
+    text-align: center;
+}
+.danyuanhaocontent view.danyuanhaoselected{
+    border:2rpx solid #51C332;
+    color:#02A9FF;
+}
+.danyuanhaocontent view text{
+    font-size:24rpx;
+    display: block;
+    padding-top:32rpx;
+    padding-bottom:32rpx;
+    padding-left:10rpx;
+    padding-right:10rpx;
+}
+/* 点击显示楼层 */
+.showlouceng{
+    width:100%;
+    float:left;
+    position: fixed;
+    bottom:0;
+    z-index: 2;
+    background-color:#fff;
+    padding-bottom:40rpx;
+}
+.showlouceng .title{
+    width:100%;
+    float:left;
+}
+.showlouceng .title view{
+    margin-top:20rpx;
+}
+.showlouceng .title .titleleft{
+    float:left;
+    margin-left:20rpx;
+}
+.showlouceng .title .titleright{
+    float:right;
+    margin-right:20rpx;
+}
+.showlouceng .title view text{
+    font-size:32rpx;
+}
+.showlouceng .title .titleleft text{
+    color:#999;
+}
+.showlouceng .title .titleright text{
+    color:#51C332;
+}
+.loucengcontent{
+    width:100%;
+    float:left;
+    margin-top:20rpx;
+}
+.loucengcontent view{
+    float:left;
+    width:30%;
+    height: 80rpx;
+    line-height: 1;
+    margin-left:2%;
+    margin-top:20rpx;
+    border:2rpx solid #999;
+    text-align: center;
+}
+.loucengcontent view.loucengselected{
+    border:2rpx solid #51C332;
+    color:#02A9FF;
+}
+.loucengcontent view text{
+    font-size:24rpx;
+    display: block;
+    padding-top:32rpx;
+    padding-bottom:32rpx;
+    padding-left:10rpx;
+    padding-right:10rpx;
+}
+/* 点击显示房号 */
+.showfanghao{
+    width:100%;
+    float:left;
+    position: fixed;
+    bottom:0;
+    z-index: 2;
+    background-color:#fff;
+    padding-bottom:40rpx;
+}
+.showfanghao .title{
+    width:100%;
+    float:left;
+}
+.showfanghao .title view{
+    margin-top:20rpx;
+}
+.showfanghao .title .titleleft{
+    float:left;
+    margin-left:20rpx;
+}
+.showfanghao .title .titleright{
+    float:right;
+    margin-right:20rpx;
+}
+.showfanghao .title view text{
+    font-size:32rpx;
+}
+.showfanghao .title .titleleft text{
+    color:#999;
+}
+.showfanghao .title .titleright text{
+    color:#51C332;
+}
+.fanghaocontent{
+    width:100%;
+    float:left;
+    margin-top:20rpx;
+}
+.fanghaocontent view{
+    float:left;
+    width:30%;
+    height: 80rpx;
+    line-height: 1;
+    margin-left:2%;
+    margin-top:20rpx;
+    border:2rpx solid #999;
+    text-align: center;
+}
+.fanghaocontent view.fanghaoselected{
+    border:2rpx solid #51C332;
+    color:#02A9FF;
+}
+.fanghaocontent view text{
+    font-size:24rpx;
+    display: block;
+    padding-top:32rpx;
+    padding-bottom:32rpx;
+    padding-left:10rpx;
+    padding-right:10rpx;
+}

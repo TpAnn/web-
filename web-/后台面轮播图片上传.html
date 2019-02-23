@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+    	body{padding:40px;}
+    	
+    	.files{height:120px;width: 100%; text-align: center; border:1px solid red;}
+    	.files div{position: relative; width:100px; overflow: hidden; height:100px; border: 1px solid blue; float: left; margin:5px;}
+    	.files div span{display: inline-block; width:20px; background:#000; color: #fff; height:20px; line-height: 20px; border:1px solid green; border-radius: 50%; position: absolute;top:0;right:0;z-index: 3;}
+    	.files div input{position: absolute;left:0;top:0;opacity: 0; width:100%; height:100%; width: 100px;
+    	 height: 100px;}
+    	.files div img{position: absolute;left:50%;transform: translateX(-50%); width: 100px; height: 100%;
+    	 width: 100%;  }
+    	.files div{
+    		width: 25%;
+    		height: 170px;
+    		border:#eee solid 1px  ;
+    		position: relative;
+    	}
+
+
+
+    </style>
+</head>
+
+<body>
+<form >
+	<div class="files">
+		<div>
+			<img src="12.png" >
+			<input class="filesBtn" type="file" name="file1" accept="image/*" onchange="inputChange(this)" /> 
+		</div>
+		<div>
+			<img src="12.png" >
+			<input class="filesBtn" type="file" name="file2" accept="image/*" onchange="inputChange(this)" /> 
+		</div>
+		<div>
+			<img src="12.png" >
+			<input class="filesBtn" type="file" name="file3" accept="image/*" onchange="inputChange(this)" /> 
+		</div>
+		<div style="width:10%">
+			<button type="submit" id="btn">提交</button>
+		</div>
+	</div>
+
+</form>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+	function inputChange(e){
+		//获取到图片路径
+		var srcs1 = window.URL.createObjectURL(e.files[0]);
+		//原图的图片替换成新的图片路径
+		$(e).prev().attr("src",srcs1).css("z-index","1");
+		//设置图片的层次
+		$(e).css("z-index","1");
+		//添加删除图标
+		$(e).parent().append("<span class='close'>x</span>");
+
+
+		//点击删除图标
+		$(".close").click(function(){
+			$(this).css("z-index","0");
+			$(this).prev().css("z-index","2");
+			//将图片路径换成原来的
+			$(this).siblings("img").attr("src","12.png").css("z-index","1");
+			//删除图标
+			$(this).remove();
+		});
+	}
+
+     $("#btn").click(function(){
+         $("#btn").css({"opacity":"0.8","disabled":"disabled"});
+	      $("#btn").val("正在提交,请耐心等待.....");
+	        var formData = new FormData($( "form" )[0]);
+             $.ajax({
+                  url:"{php echo $this->createMobileUrl('dyfile', array('op' => 'fail'));}",
+                  type: 'POST',
+                  data: formData,    
+                  contentType: false,
+                  processData: false,
+                  success: function (returndata) {
+                  //  window.location.href="{php echo $this->createMobileUrl('dyorder', array('status' => '6'))}";
+                  }
+             });
+    });    
+
+</script>
+</body>
+</html>

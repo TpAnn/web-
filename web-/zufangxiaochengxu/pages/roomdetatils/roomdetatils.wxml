@@ -1,0 +1,194 @@
+<view class="container">
+    <swiper autoplay='true' circular='true' indicator-dots='true' indicator-color='#9a9a9a' indicator-active-color='#02A9FF'>
+        <block wx:for="{{imgUrls}}" wx:key="imgUrls">
+            <swiper-item>
+                <image class="swiper_image" src="{{item}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="clear"></view>
+    <view class="top">
+        <view class="title">
+            <text>{{roomname}}</text>
+        </view>
+        <view class="titlebottom">
+            <view class="address">
+                <text>{{address}}</text>
+                <image src="/images/address.png"></image>
+            </view>
+            <view class="collect" catchtap ="selecticondata">
+                <image src="/images/collect.png" class='collected' wx:if="{{selecticonflag == false}}"></image>
+                <image src="/images/uncollect.png" wx:if="{{selecticonflag == true}}"  ></image>
+                <text class='collected' wx:if="{{selecticonflag == false}}">收藏</text>
+                <text wx:if="{{selecticonflag == true}}">收藏</text>
+            </view>
+        </view>
+    </view>
+    <view class="clear"></view>
+    <view class="center">
+        <view class="roominfos">
+            <view class="one">
+                <view class="rightborder">
+                    <text class='shoujiavalue'>{{price / 10000}}元</text>
+                    <text class="spec">售价</text>
+                </view>
+                <view class="rightborder">                    
+                    <text class="shoujiavalue">{{huxing}}</text>
+                    <text class="spec">户型</text>
+                </view>
+                <view>
+                    <text class="shoujiavalue">{{mianji}}</text>
+                    <text class="spec">面积</text>
+                </view>
+            </view>
+            <view class="two">
+                <view>
+                    <text class="spec">单价：</text>
+                    <text>{{danjia}}元/m²</text>
+                </view>
+                <view>
+                    <text class="spec">朝向：</text>
+                    <text>{{chaoxiang}}</text>
+                </view>
+                <view>
+                    <text class="spec">楼层：</text>
+                    <text>{{louceng}}</text>
+                </view>
+                <view>
+                    <text class="spec">位置：</text>
+                    <text>{{address}}</text>
+                </view>
+                 <view>
+                    <text class="spec">年代：</text>
+                    <text>{{jungong}}</text>
+                </view>
+               
+                 <view>
+                    <text class="spec">发布：</text>
+                    <text>{{create}}</text>
+                </view>
+                 <view>
+                    <text class="spec">小区：</text>
+                    <text class="blue">{{commname}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="roomguarantee">
+            <view class="titles">
+                <text class="spec">二手房服务保障</text>
+                <view>
+                    <text>了解详情</text>
+                    <image src="/images/right.png"></image>
+                </view>
+            </view>
+             <view class="icons">
+                <view class="first">
+                    <image src="/images/icon1.png"></image>
+                    <text>成交返现</text>
+                </view>
+                <view class="second">
+                    <image src="/images/icon2.png"></image>
+                    <text>购房保障</text>
+                </view>
+                <view class="third">
+                    <image src="/images/icon3.png"></image>
+                    <text>在线买家顾问</text>
+                </view>
+                <view class="last">
+                    <image src="/images/icon4.png"></image>
+                    <text>法律支持</text>
+                </view>
+            </view> 
+        </view>
+    </view>
+    <view class="clear"></view>
+    <view class="bottom">
+        <view class="titles">
+            <text>小区概况</text>
+        </view>
+        <view class="map">
+            <view class="mapname" catchtap="returnpage">
+                
+                <view class="left">
+                    <text class='xq-bottom' >小区：{{commname}}</text>
+                    <text class="spec">地址:{{address}}</text>
+                    <text class="spec">文字介绍:{{jieshoa}}</text>
+                    <text class="spec">生活配套:{{peitao}}</text>
+                     <text class="spec">周边环境:{{zhoubian}}</text>
+                </view>
+                <view class="right">
+                    <image src="/images/right.png"></image>
+                </view>
+            </view>
+            <view class="mapcontent">
+                <map id="map" longitude="{{lng}}" latitude="{{lat}}" scale="14" markers="{{markers}}" bindtap="showmap" show-location style="width: 100%; height:300rpx; z-index:0"></map>            
+            </view>
+        </view>
+        <view class="clear"></view>
+        <view class="areacommand">
+            <view class="area_buy_rent"  style="margin-top: 38%; ">
+                <block wx:if="{{choose == true}}">
+                        <view class="area_title">
+                            <text class="area_tobuy text">{{area_tobuy}}</text>
+                            <text class="area_torent" catchtap="collect">{{area_torent}}</text>
+                        </view>
+                        <view class="area_content" wx:for="{{zaishoufang}}" wx:key="zaishoufang" data-id="{{item.id}}" catchtap="showdetail">
+                            <view class="left">
+                                <image class="goods_img" src="{{goods_img}}"></image>
+                            </view>
+                            <view class="right">
+                                <view class="title">
+                                    <text>户型{{item.huxing}} 朝向{{item.chaoxiang}} 楼层{{item.louceng}} 楼栋{{item.loudong}} 面积{{item.mianji}}</text>
+                                </view>
+                                <view class="desc">
+                                    <text>{{item.huxing}} {{item.mianji}}平 {{item.chaoxiang}}</text>
+                                </view>
+                                <view class="address">
+                                    <text>{{address}}</text>
+                                    <text class="price">{{item.money / 10000}}万元</text>
+                                </view>  
+                                <view class="prop">
+                                    <block wx:for="{{item.biaoqian}}"  wx:key="biaoqian2">
+                                        <text class="prop{{index+1}}">{{item}}</text> 
+                                    </block>
+                                </view>   
+                            </view>
+                        </view>
+                    </block>
+                    <block wx:if="{{choose == false}}">
+                        <view class="area_title">
+                            <text class="area_tobuy" catchtap="my_tracks">{{area_tobuy}}</text>
+                            <text class="area_torent text">{{area_torent}}</text>
+                        </view>
+                        <view class="area_content" wx:for="{{zaizufang}}" wx:key="zaizufang" data-id="{{item.id}}" catchtap="showdetail">
+                            <view class="left">
+                                <image class="goods_img" src="{{goods_img}}"></image>
+                            </view>
+                            <view class="right">
+                                <view class="title">
+                                    <text>户型{{item.huxing}} 朝向{{item.chaoxiang}} 楼层{{item.louceng}} 楼栋{{item.loudong}} 面积{{item.mianji}}</text>
+                                </view>
+                                <view class="desc">
+                                    <text>{{item.huxing}} {{item.mianji}}平 {{item.chaoxiang}}</text>
+                                </view>
+                                <view class="address">
+                                    <text>{{address}}</text>
+                                    <text class="price">{{item.money}}元</text>
+                                </view>  
+                                <view class="prop">
+                                    <block wx:for="{{item.biaoqian}}"  wx:key="biaoqian2">
+                                        <text class="prop{{index+1}}">{{item}}</text> 
+                                    </block>
+                                </view>   
+                            </view>
+                        </view>
+                    </block>
+                    <view class='h200rpx'></view>
+            </view>
+        </view>
+    </view>
+    <view class="nextbutton">
+        <button class="button1" catchtap="qiugou">求购需求</button>
+        <button class="button2" catchtap="yuekan">一键约看房</button>
+    </view>
+</view>

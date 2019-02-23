@@ -1,0 +1,22 @@
+.container{
+    width:100%;
+    float:left;
+    margin-bottom:40rpx;
+}
+.content{
+    margin:auto;
+    margin-top:40rpx;
+    text-align: left;
+}
+.content image{
+    height: 300rpx;
+    display: block;
+    margin:auto;
+}
+.content text{
+    font-size:28rpx;
+    width:90%;
+    display: block;
+    line-height: 1.8;
+    margin:auto;
+}

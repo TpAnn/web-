@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS压缩图片插件</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		.preview {
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+<input type="file" multiple id="image" />
+<div id="preview"></div>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.imagecompress.js"></script>
+<script type="text/javascript">
+	$('#image').imageCompress({
+		'quality': 50,
+		'onloadStart': function(result){
+			console.log('读取图片开始'+result);
+		},
+		'onloadEnd': function(result){
+			console.log('读取图片结束'+result);
+		},
+		'oncompressStart': function(result){
+			console.log('压缩图片开始'+result);
+		},
+		'oncompressEnd': function(result){
+			console.log('压缩图片结束'+result);
+			$('#preview').append(result);
+			$('#preview').find('img').addClass('preview');
+		},
+		'callback': function(){
+			console.log('处理完毕');
+		}
+	});
+</script>
+</body>
+</html>

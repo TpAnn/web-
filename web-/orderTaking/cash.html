@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>提现</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <header class="title">
+            <span>提现</span>
+        </header>
+        <section class="cash-content" id="app" v-cloak>
+            <aside class="cash-top">
+                <span>当前可提现金额为：<i>{{money}}</i>元</span>
+                <hr class="line" />
+            </aside>
+            <aside class="cash-center">
+                <section class="cash-item">
+                    <span class="card">提现到：<i>6217 0020 2006 1106 803</i></span>
+                    <div>
+                        <span>中国建设银行</span>
+                        <span class="right">刘先生</span>
+                    </div>
+                </section>
+                <section class="cash-item cash-item-item">
+                    <span class="item-span">提现金额</span>
+                    <input class="item-span money" type="number" name="money" v-model.number="money" />
+                </section>
+                <section class="cash-item cash-item-item">
+                    <span class="item-span item-tip">提现金额大于1000元免手续费，小于1000元收取1元手续费</span>
+                </section>
+                <section class="cash-item cash-item-item cash-item-noboder">
+                    <aside class="up-title">
+                        <span>您绑定的手机为：<i>13214564</i></span>
+                    </aside>
+                    <aside class="buy-desc">
+                        <section class="buy-input">
+                            <input class="leftinput" type="number" name="code" placeholder="请输入验证码" />
+                            <span>获取验证码</span>
+                        </section>
+                    </aside>
+                </section>
+                <section class="cash-button">
+                    <button type="button">申请提现</button>
+                </section>
+            </aside>
+            <aside class="cash-bottom">
+                <span class="cash-bottom-title">【温馨提示】</span>
+                <span>14:00之前提现，银行当日处理，预计1-2个工作热可到账；节假日财务顺延处理；</span>
+                <span>请仔细核对绑定银行卡内的用户名、开户支行、卡号的信息是否正确，信息错误则会影响到账时间。</span>
+            </aside>
+        </section>
+    </section>
+    <script src="js/require.js" defer async="true" ></script>
+    <script src="js/require.js" data-main="js/main" id="current-page" current-page="cash" target-module="cash"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+/* 公共样式  start*/
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 0.875rem;
+    font-family: '微软雅黑';
+    color:#666;
+}
+ul,li{
+    list-style-type: none;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:link{
+    color:#666;
+}
+a:visited{
+    color:#551A8B;
+}
+a:hover{
+    color:#0000cc;
+    text-decoration: underline;
+}
+a:active{
+    color:#0000cc;
+    text-decoration: underline;
+}
+.clear{
+    clear:both;
+}
+i,em{
+    font-style:normal;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:#ccc;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#ccc;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#ccc;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#ccc;
+}
+
+
+/* 公共样式  end*/
+
+/* header title start */
+.title{
+    width:100%;
+    height:3.125rem;
+    line-height: 3.125rem;
+    background-color:#0093DA;
+}
+.title span{
+    color:#fff;
+    font-size:1.1rem;
+}
+/* header title end */
+
+/* footer  start*/
+.footerdiv{
+    width:100%;
+    height:4.375rem;
+    float:left;
+}
+.common-footer{
+    width:100%;
+    height:4.375rem;
+    border-top:1px solid #999;
+    position: fixed;
+    bottom:0;
+    background-color:#fff;
+}
+.common-footer-nav ul li{
+    width:25%;
+    height:4.375rem;
+    line-height: 4.375rem;
+    float:left;
+}
+.nav-ul-li-active{
+    background-color:#0093DA;
+}
+.footer-nav-ul li img{
+    width:1.875rem;
+    height:1.875rem;
+    display:block;
+    margin:8px auto 0 auto;
+}
+.footer-nav-ul li img.img-active{
+    display: none;
+}
+.footer-nav-ul li span{
+    height:2rem;
+    line-height:2rem;
+    display:block;
+    color:#999999;
+}
+.footer-nav-ul li.nav-ul-li-active img.img-active{
+    display: block;
+}
+.footer-nav-ul li.nav-ul-li-active img.img{
+    display: none;
+}
+.footer-nav-ul li.nav-ul-li-active span{
+    color:#fff;
+}
+/* footer end*/
+
+/*line start*/
+.line{
+    width:100vw;
+    height:10px;
+    background-color: #eee;
+    border:0;
+    clear:both;
+}
+/*line end*/
+
+/*slick start*/
+.slick-slide{
+    height: auto !important;
+}
+/*slick end*/

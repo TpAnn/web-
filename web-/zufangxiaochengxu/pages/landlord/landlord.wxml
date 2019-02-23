@@ -1,0 +1,116 @@
+<view class="container" wx:if="{{searchareaflag == true}}">
+    <view class="top">
+        <view class="topbg">
+            <view class="bg">
+                <view class="title">
+                    <text>{{title1}}</text>
+                </view>
+                <view class="content" catchtap="searcharea">
+                    <text>{{content1}}</text>
+                    <image src="{{rightimgurl}}"></image>
+                    <input type="text" style="display:none;" name="commid" value="{{commid}}" ></input>
+                </view>
+            </view>
+            <view class="bg">
+                <view class="title">
+                    <text>{{title2}}</text>
+                </view>
+                <view class="content" catchtap="selectloudong">
+                    <text>{{content2}}</text>
+                    <image src="{{rightimgurl}}"></image>
+                </view>
+            </view>
+            <view class="bg">
+                <view class="title">
+                    <text>{{title3}}</text>
+                </view>
+                <view class="content">
+                    <input placeholder="{{danyuan}}" class="danyuan" bindinput="danyuaninput" placeholder-style='color:#ccc;font-size:28rpx;' value=""></input>
+                    <text style='float:right;'>单元</text>
+                </view>
+            </view>
+            <view class="bg">
+                <view class="title">
+                    <text>{{title4}}</text>
+                </view>
+                <view class="content">
+                    <input placeholder="{{louceng}}" class="louceng" bindinput="loucenginput"  placeholder-style='color:#ccc;font-size:28rpx;' value=""></input>
+                    <text style='float:right;'>层</text>
+                </view>
+            </view>
+            <view class="bg">
+                <view class="title">
+                    <text>{{title5}}</text>
+                </view>
+                <view class="content">
+                    <input placeholder="{{fanghao}}" class="fanghao" bindinput="fanghaoinput" placeholder-style='color:#ccc;font-size:28rpx;' value=""></input>
+                    <text style='float:right;'>号</text>
+                </view>
+            </view>  
+             <view class="bg">
+                <view class="title">
+                    <text>{{roomnametitle}}</text>
+                </view>
+                <view class="content">
+                    <input placeholder="{{roomnametext}}" class="fanghao" bindinput="roomnameinput" style="width:450rpx;" placeholder-style='color:#ccc;font-size:28rpx;' value="{{roomname}}"></input>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="center">
+        <view class="next">
+            <text>{{next}}</text>
+        </view> 
+        <view class="nextbutton">
+            <button class="button1" catchtap="chushou">{{button1value}}</button>
+            <button class="button2" catchtap="chuzu">{{button2value}}</button>
+        </view>
+    </view>
+    <view class="bottom">
+        <view class="title">
+            <view class="left"></view>
+            <text>{{title6}}</text>
+            <view class="right"></view>
+        </view>
+        <view class="content">
+            <image src="{{bottomimgurl}}"></image>
+        </view> 
+    </view>  
+</view>
+<!-- 点击搜索显示小区 -->
+<view class="container containersearcharea"   wx:if="{{searchareaflag == false}}">
+    <view class="top topsearcharea">
+        <view class="focustopsearch">
+            <view class="specinput">
+                <input class="focusinput" type="text" bindconfirm="search"  bindinput="searchinput" confirm-type="search" focus="true" placeholder-style='color:#ccc;font-size:28rpx;' placeholder="请输入小区名称或地址" name="address"></input>
+            </view>
+            <view class="specimage" catchtap="search">
+                <image src="/images/search.png"></image>
+            </view>
+        </view>
+        <view class="cancel" catchtap="hiddensearch">
+            <text>取消</text>
+        </view>
+    </view>
+    <view class="clear"></view>
+    <view class="showcontent" wx:for="{{datas1}}" wx:key="datas1" data-name="{{item.name}}" data-id="{{index}}" catchtap="selectdatas">
+        <text>{{item.name}}</text>
+        <text>{{item.address}}</text>
+    </view>
+</view>
+<!-- 遮盖层 -->
+<view class="zhegaiceng" wx:if="{{zhegaicengflag == true}}"></view>
+<!-- 点击显示楼栋号 -->
+<view class="showloudong" wx:if="{{selectloudongflag == true}}">
+    <view class="title">
+        <view class="titleleft" catchtap="cancelbutton">
+            <text>取消</text>
+        </view>
+    </view>
+    <view class="clear"></view>
+    <view class="loudongcontent">
+        <view wx:for="{{datas2}}" wx:key="datas2" data-id="{{index}}" catchtap="selectloudongdata">
+            <text>{{item}}</text>
+        </view>
+    </view>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+</view>

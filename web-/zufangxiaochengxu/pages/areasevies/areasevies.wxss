@@ -1,0 +1,52 @@
+.container{
+    width:100%;
+    float:left;
+}
+.top{
+    float:left;
+    width:100%;
+    margin-top:40rpx;
+}
+.top view{
+    float:left;
+    margin:0;
+    width:22%;
+    text-align: center;
+}
+.top view.jiadian,
+.top view.songshui{
+    margin-left:2.3%;
+}
+.top view.weixiu{
+    margin-left:3%;
+}
+.top view.muying{
+    margin-left:3%;
+}
+.top view.shutong{
+    float:right;
+    margin-right:3%;
+}
+.top view.xiushouji{
+    width:27%;
+    float:right;
+    text-align: center;
+}
+.top text{
+    font-size:28rpx;
+    display: block;
+    margin-top:16rpx;
+}
+.top image{
+    display: block;
+    margin:auto;
+    width:100rpx;
+    height: 100rpx;
+}
+.bottom{
+    margin-top:10rpx;
+}
+.bottom image{
+    width:100vw;
+    height: 250rpx;
+}

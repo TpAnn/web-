@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>分布</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/layui.css">
+<style>
+	#paging{
+		border:red 1px solid;
+		height: 40px;
+	}
+	#paging span{
+		display: block;
+		padding:5px;
+		border:#ccc 1px solid;
+		margin: 2px;
+		font-size: 14px;
+		float: left;
+		text-align: center;
+		color: #666;
+		border-radius: 1px;
+	}
+</style>
+<body>
+	<div id="text1">
+		
+	</div>
+</body>
+<script type="text/javascript" src="js/layui.js"></script>
+<script>
+$(".first").click(function(){
+	getPagetInfo();
+	currentPageAllAppoint = 1;//当点首页的时候跳到的应该是第一页
+	toPage();//然后进行分页的初始化
+});
+
+
+//分页参数设置 
+var statAllAppoint = 0;//开始页数
+var slimitAllAppoint = 10;//每页显示数据的条数
+var currentPageAllAppoint = 1;//当前页数
+var datatLength =14;//数据总条数
+
+getPagetInfo();
+//后台ajax请求
+function getPagetInfo(){
+	$.ajax({
+		type:"post",
+		async:false,
+		url:"",
+		data:{stat:statAllAppoint,limit:slimitAllAppoint},
+		success:function(data,status){	
+		/*	statAllAppoint = data.currentResult;//当前页数
+			datatLength = datat.total;//数据总条数*/
+		}
+	});
+}
+	
+
+		
+	//调用分页
+	laypage({
+		cout:"text1"
+		,count:50
+		,limit:datatLength
+		,jump:function(obj,e){
+			getPagetInfo(obj.curr);
+			
+		}
+	});
+	
+	
+
+	laypage.render({
+    elem: 'test1' //注意，这里的 test1 是 ID，不用加 # 号
+    ,count: 50 //数据总数，从服务端得到
+  });
+});
+
+	
+</script>
+</html>

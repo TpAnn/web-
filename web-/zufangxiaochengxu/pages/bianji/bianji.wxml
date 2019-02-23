@@ -1,0 +1,193 @@
+<view class="container">
+    <view class="top">
+        <view class="topbg">
+            <view class="bg">
+                <view class="title">
+                    <text>{{title1}}</text>
+                </view>
+                <view class="content">
+                    <input placeholder="{{moneytext}}" class="shoujia" placeholder-style='color:#ccc;' value="{{money}}"></input>
+                    <text style="float:right;">{{content1}}</text>
+                </view>
+            </view>
+            <view class="bg">
+                <view class="title">
+                    <text>{{title2}}</text>
+                </view>
+                <view class="content" catchtap="selectzhuangxiu">
+                    <text>{{zhuangxiu}}</text>
+                    <image src="{{rightimgurl}}"></image>
+                </view>
+            </view>
+            <view class="bg">
+                <view class="title">
+                    <text>{{title3}}</text>
+                </view>
+                <view class="content">
+                    <input placeholder="{{huxingtext}}" class="mianji" bindinput="huxinginput" style="width:500rpx;" placeholder-style='color:#ccc;font-size:28rpx;' value="{{huxingval}}"></input>
+                </view>
+            </view>
+            <view class="bg">
+                <view class="title">
+                    <text>{{areas}}</text>
+                </view>
+                <view class="content">
+                    <input placeholder="{{mianjitext}}" class="mianji" placeholder-style='color:#ccc;' value="{{mianji}}"></input>
+                    <text style="float:right;">{{content4}}</text>
+                </view>
+            </view>
+            <view class="bg ">
+                <view class="title">
+                    <text>{{direc}}</text>
+                </view>
+                <view class="content" catchtap="selectchaoxiang">
+                    <text>{{chaoxiang}}</text>
+                    <image src="{{rightimgurl}}"></image>
+                </view>
+            </view>
+        </view>  
+    </view>
+    <view class="countimage">
+        <block wx:for="{{imgs}}" wx:for-item="item" wx:key="imgs">
+        <view class="cofile">
+            <image data-id="{{index}}" src="{{item.src}}" bindtap="previewImage"></image>
+        </view>
+        </block>
+        <view class="coinputbox">
+        <view class="coinput" bindtap="chooseImage">
+            <text>请上传房屋图片，最多只能上传5张图片</text>
+        </view>
+        </view>
+    </view>
+ <view class="clear"></view>
+    <view class="top">
+        <view class="topbg">
+            <view class="bg">
+                <view class="title">
+                    <text>{{title4}}</text>
+                </view>
+                <view class="content">
+                    <input type="text" class="contactnameinput" placeholder="{{contactname}}" placeholder-style='color:#ccc;' bindinput="getname" value="{{chenghu}}"></input>
+                    <radio-group class="radio-group" bindchange="contactchange">
+                        <label class="radio" wx:for="{{contactchange}}">
+                            <radio value="{{item.sex}}" checked="{{item.checked}}"/>{{item.sex}}
+                        </label>
+                    </radio-group>
+                </view>
+            </view>
+            <view class="bg">
+                <view class="title">
+                    <text>{{title5}}</text>
+                </view>
+                <view class="content phone">
+                    <input type="number" class="phonenumber" placeholder-style='color:#ccc;' bindinput="getdianhua" placeholder="{{phonenumber}}" value="{{dianhua}}"></input>
+                    <view class="phoneview" catchtap="getcode"><text class="phonenumbertext">{{content5}}</text></view>
+                </view>
+            </view>
+            <view class="bg">
+                <view class="title">
+                    <text>{{codetitle}}</text>
+                </view>
+                <view class="content codecontent">
+                    <input type="number" class="codeinput" placeholder="{{code}}" placeholder-style='color:#ccc;' value="{{codevalue}}"></input>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="center">
+        <checkbox-group bindchange="checkboxChange">
+            <label class="checkbox" wx:for="{{items}}" wx:key="check">
+                <checkbox checked="{{check}}" value="{{item.value}}"/><text>{{item.value}}</text>
+            </label>
+        </checkbox-group>
+        <button catchtap="next">{{nextbutton}}</button>
+    </view> 
+</view>
+<!-- 遮盖层 -->
+<view class="zhegaiceng" wx:if="{{zhegaicengflag == true}}"></view>
+<!-- 点击显示装修 -->
+<view class="showzhuangxiu" wx:if="{{selectzhuangxiuflag == true}}">
+    <view class="title">
+        <view class="titleleft" catchtap="cancelbutton">
+            <text>取消</text>
+        </view>
+    </view>
+    <view class="clear"></view>
+    <view class="zhuangxiucontent">
+        <view wx:for="{{datas1}}" wx:key="datas1" data-id="{{index}}" catchtap="selectzhuangxiudata">
+            <text>{{item}}</text>
+        </view>
+    </view>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+</view>
+<!-- 点击显示户型 -->
+<view class="showhuxing" wx:if="{{selecthuxingflag == true}}">
+    <view class="title">
+        <view class="titleleft" catchtap="cancelbutton">
+            <text>取消</text>
+        </view>
+    </view>
+    <view class="clear"></view>
+    <view class="huxingcontent">
+        <view wx:for="{{datas2}}" wx:key="data2" data-id="{{index}}" catchtap="selecthuxingdata">
+            <text>{{item}}</text>
+        </view>
+    </view>                                                                                                                                                                                                                                          
+</view>
+<!-- 点击显示朝向 -->
+<view class="showchaoxiang" wx:if="{{selectchaoxiangflag == true}}">
+    <view class="title">
+        <view class="titleleft" catchtap="cancelbutton">
+            <text>取消</text>
+        </view>
+    </view>
+    <view class="clear"></view>
+    <view class="chaoxiangcontent">
+        <view wx:for="{{datas3}}" wx:key="datas3" data-id="{{index}}" catchtap="selectchaoxiangdata">
+            <text>{{item}}</text>
+        </view>
+    </view>                                                                                                     
+</view>
+
+<!-- 点击显示年代 -->
+<view class="showtime" wx:if="{{selecttimeflag == true}}">
+    <view class="title">
+        <view class="titleleft" catchtap="cancelbutton">
+            <text>取消</text>
+        </view>
+    </view>
+    <view class="clear"></view>
+    <view class="timecontent">
+        <view wx:for="{{datas4}}" wx:key="datas4" data-id="{{index}}" catchtap="selecttimedata">
+            <text>{{item}}</text>
+        </view>
+    </view>                                                                                                     
+</view>
+<!-- 点击显示类型 -->
+<view class="showtypes" wx:if="{{selecttypesflag == true}}">
+    <view class="title">
+        <view class="titleleft" catchtap="cancelbutton">
+            <text>取消</text>
+        </view>
+    </view>
+    <view class="clear"></view>
+    <view class="typescontent">
+        <view wx:for="{{datas5}}" wx:key="datas5" data-id="{{index}}" catchtap="selecttypesdata">
+            <text>{{item}}</text>
+        </view>
+    </view>                                                                                                     
+</view>
+<!-- 点击显示小区 -->
+<view class="showplot" wx:if="{{selectplotflag == true}}">
+    <view class="title">
+        <view class="titleleft" catchtap="cancelbutton">
+            <text>取消</text>
+        </view>
+    </view>
+    <view class="clear"></view>
+    <view class="plotcontent">
+        <view wx:for="{{datas6}}" wx:key="datas6" data-id="{{index}}" catchtap="selectplotdata">
+            <text>{{item}}</text>
+        </view>
+    </view>                                                                                                     
+</view>
+
