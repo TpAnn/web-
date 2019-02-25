@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>模拟百度下拉提示框</title>
+        <link rel="stylesheet" type="text/css" href="./index.css" />
+    </head>
+    <style>
+        *{
+            padding: 0px;
+            height: 0px;
+        }
+        .box{
+            width: 500px;
+            margin: 200px auto;
+        }
+        ul{
+            width: 392px;
+            padding: 5px;
+            list-style: none;
+        }
+        input{
+            width: 400px;
+            height: 40px;
+            text-indent: 12px;
+            
+
+        }
+        li{
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+        }
+        button{
+            width: 70px;
+        }
+    </style>
+    <body>
+        <div class="box">
+            <input id="search" type="text" value=""/>
+            <ul id='select'></ul>
+        </div>
+    </body>
+    <script>
+        //需求:输入内容(输入事件,键盘弹起事件),模拟服务器内容,创建ul,并在其中显示
+
+        //1.获取事件源
+        //模拟服务器获取内容
+        var arr = ["","前端入门到放弃","前端要学什么","周润发","周润发赌神","周润发澳门风云","周末双休是国家规定吗","c++","Java","javascript","66","搬砖","潘家"];
+        var box = document.getElementById('select');
+        var inp = document.getElementById('search');
+        var str = '';
+
+
+        //2.绑定事件(输入内容(输入事件,键盘弹起事件))
+        inp.onkeyup = function (){
+            
+            //每一次匹配数据前，先把列表清空，如果不清空会重叠
+            box.innerHTML = '';
+            var defaultColor = '#fff';
+            if(this.value){//文本里有输入内容时才进行数据匹配和显示
+                for(var i = 0; i < arr.length ; i++){//遍历数组
+
+                    //如果文本框输入的字符或字符串能匹配到数组元素的字符串，就创建一个li标签，把数组的这个元素当成li标签的内容展示出来
+                    if(arr[i].indexOf(this.value) != -1){ 
+                        var li = document.createElement('li'); //创建li
+                        li.innerHTML = arr[i];//赋值
+                        box.style.display= 'block';
+                        box.appendChild(li);
+
+                        // //给新创建的每一个li标签注册一个鼠标移入移出事件
+                        li.onmouseover= function () {
+                            this.defaultColor=this.style.backgroundColor; //定义一个defaultColor属性来存储li标签本来的背景颜色
+                            this.style.backgroundColor="#F1F1F1";
+                        };
+    
+                        li.onmouseout= function () {
+                            this.style.backgroundColor=this.defaultColor;
+                        };
+                        
+                        //给新创建的每一个li标签注册一个点击事件
+                        li.onclick = function (){
+                            inp.value = this.innerHTML; //将点击列表内容显示到文本框
+                        }
+                    }
+                }
+            }
+        };
+        //给整个HTML注册一个点击事件,清空列将列表隐藏
+        document.documentElement.onclick = function(){
+            box.innerHTML = '';
+            box.style.display = 'none';
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+    </script>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+<body>
+	<div class="box">
+		<ul>
+			<li class="current">鞋子</li>
+			<li>袜子</li>
+			<li>帽子</li>
+			<li>裤子</li>
+			<li>裙子</li>
+		</ul>
+		<span class="show">鞋子</span>
+		<span>袜子</span>
+		<span>帽子</span>
+		<span>裤子</span>
+		<span>裙子</span>
+	</div>
+	<div class="box">
+		<ul>
+			<li class="current">鞋子</li>
+			<li>袜子</li>
+			<li>帽子</li>
+			<li>裤子</li>
+			<li>裙子</li>
+		</ul>
+		<span class="show">鞋子</span>
+		<span>袜子</span>
+		<span>帽子</span>
+		<span>裤子</span>
+		<span>裙子</span>
+	</div>
+
+</body>
+<script type="text/javascript">
+	// window.onload = function () {
+		//需求:鼠标放到上面的li上,li本身变色(添加类),对应的span也显示出来(添加类);
+		//思路:1.点亮上面的盒子,2 利用索引显示下面盒子
+		
+		//1.获取所有的box
+		/*var boxAr = document.getElementsByTagName('box');
+
+		//让每一个box都调用函数
+		for(var i =0; i< boxAr.length; i++){
+			fn(boxAr[i]);
+		}
+
+		function fn(element) {
+			var liAr = element.getElementsByTagName('li');
+			var spanAr = element.getElementsByTagName('span');
+
+			for(var i = 0; i<liAr.length; i++){
+				//绑定索引(新增一个自定义的属性:index属性)
+				liAr[i].setAttribute('index', i);
+
+				liAr[i].onmouseover = function() {
+
+					 //点亮上面的盒子 2.利用索引显示下面盒子
+					 for(j = 0; j < liAr.length; j++){
+					 	liAr[j].removeAttribute('class');
+					 	spanAr[j].removeAttribute('class');
+					 }
+					 this.setAttribute('class','current');
+					 spanAr[this.getAttribute('index')].setAttribute('class','show');
+				}
+			}
+		}
+	}*/
+
+
+	  window.onload = function () {
+            //需求：鼠标放到上面的li上，li本身变色(添加类)，下方对应的span也显示出来(添加类);
+            //思路：1.点亮上面的盒子。   2.利用索引值显示下面的对应的盒子。
+
+            //1、获取所有的box
+            var boxArr = document.getElementsByClassName("box");
+
+            //让每一个box都调用函数
+            for (var i = 0; i < boxArr.length; i++) {
+                fn(boxArr[i]);
+            };
+
+            function fn(element) {
+                var liArr = element.getElementsByTagName("li");   //注意，是element获取事件源，不是document获取事件源
+                var spanArr = element.getElementsByTagName("span");
+                //2.绑定事件（循环绑定）
+                for (var i = 0; i < liArr.length; i++) {
+                    //绑定索引值(自定义属性)
+                    liArr[i].setAttribute("index", i);
+                    liArr[i].onmouseover = function () {
+                        //3.书写事件驱动程序（排他思想）
+                        //1.点亮盒子。   2.利用索引值显示盒子。(排他思想)
+                        for (var j = 0; j < liArr.length; j++) {
+                            liArr[j].removeAttribute("class");    //注意，这里是class，不是className
+                            spanArr[j].removeAttribute("class");
+                        }
+                        this.setAttribute("class", "current");
+                        spanArr[this.getAttribute("index")].setAttribute("class", "show");
+                    }
+                }
+            }
+     	}
+    
+
+
+</script>
+</html>
