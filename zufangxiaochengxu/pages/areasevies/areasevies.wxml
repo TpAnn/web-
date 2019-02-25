@@ -1,0 +1,46 @@
+<view class="container">
+    <view class="top">
+        <view class="jiazheng" catchtap="jiazheng">
+            <image src="/images/jiazheng.png"></image>
+            <text>家政清洁</text>
+        </view>
+        <view class="jiadian" catchtap="jiadian">
+            <image src="/images/jiadian.png"></image>
+            <text>家电清洁</text>
+        </view>
+        <view class="weixiu" catchtap="shutongweixiu">
+            <image src="/images/weixiu.png"></image>
+            <text>疏通维修</text>
+        </view>
+        <view class="shutong" catchtap="xiyi">
+            <image src="/images/shutong.png"></image>
+            <text>洗衣</text>
+        </view>
+    </view>
+    <view class="clear"></view>
+    <view class="top" style='margin-bottom:40rpx;'> 
+        <view class="xianhua" catchtap="kaisuo">
+            <image src="/images/xianhua.png"></image>
+            <text>开锁配匙</text>
+        </view>
+        <view class="songshui" catchtap="songshui">
+            <image src="/images/songshui.png"></image>
+            <text>送水</text>
+        </view>
+        <view class="muying" catchtap="banjia">
+            <image src="/images/muying.png"></image>
+            <text>搬家运输</text>
+        </view>
+        <view class="xiushouji" catchtap="feijiu">
+            <image src="/images/xiushouji.png"></image>
+            <text>废旧回收</text>
+        </view>
+    </view>
+    <view class="clear"></view>
+    <view class="bottom" wx:if="{{flag == true}}" wx:for="{{adimg}}" wx:key="adimg">
+        <image src="{{item.src}}"></image>
+    </view>
+    <view class="bottom" wx:if="{{flag == false}}" style="margin-top:100px;text-align: center;font-size:28rpx;">
+        <text>暂无此广告！</text>
+    </view>
+</view>

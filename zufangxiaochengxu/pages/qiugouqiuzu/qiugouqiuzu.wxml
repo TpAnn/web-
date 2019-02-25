@@ -1,0 +1,48 @@
+<view class="area_buy_rent">
+    <block wx:if="{{choose == true}}">
+            <view class="area_title">
+                <text class="area_tobuy text">{{area_tobuy}}</text>
+                <text class="area_torent" catchtap="collect">{{area_torent}}</text>
+            </view>
+            <view class="area_content" wx:for="{{xuqiuroom1}}" wx:key="xuqiuroom" data-id="{{item.id}}">
+                <view class="left">
+                    <image class="goods_img" src="{{goods_img}}"></image>
+                </view>
+                <view class="right">
+                    <view class="title">
+                        <text>户型{{item.huxing}} 朝向{{item.chaoxiang}} 楼层{{item.louceng}} 楼栋{{item.loudong}} 面积{{item.mianji}}</text>
+                    </view>
+                        <view class="desc">
+                        <text>{{item.huxing}} {{item.mianji}}平 {{item.chaoxiang}}</text>
+                    </view>
+                    <view class="address">
+                        <text>{{item.quyu}}</text>
+                        <text class="price">{{item.arr[index][0] / 10000}}~{{item.arr[index][1] / 10000}}万元</text>
+                    </view>    
+                </view>
+            </view>
+        </block>
+        <block wx:if="{{choose == false}}">
+            <view class="area_title">
+                <text class="area_tobuy" catchtap="my_tracks">{{area_tobuy}}</text>
+                <text class="area_torent text">{{area_torent}}</text>
+            </view>
+            <view class="area_content" wx:for="{{xuqiuroom2}}" wx:key="xuqiuroom" data-id="{{item.id}}">
+                <view class="left">
+                    <image class="goods_img" src="{{goods_img}}"></image>
+                </view>
+                <view class="right">
+                    <view class="title">
+                        <text>户型{{item.huxing}} 朝向{{item.chaoxiang}} 楼层{{item.louceng}} 楼栋{{item.loudong}} 面积{{item.mianji}}</text>
+                    </view>
+                        <view class="desc">
+                        <text>{{item.huxing}} {{item.mianji}}平 {{item.chaoxiang}}</text>
+                    </view>
+                    <view class="address">
+                        <text>{{item.quyu}}</text>
+                        <text class="price">{{item.money}}元</text>
+                    </view>    
+                </view>
+            </view>
+        </block>
+</view>

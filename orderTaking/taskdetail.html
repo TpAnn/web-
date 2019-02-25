@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>任务详情</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <header class="title">
+            <span>任务详情</span>
+        </header>
+        <article class="taskdetail">
+            <section class="td-top">
+                <span>任务编号:<i id="tasknum">1465165165413146541-4564165</i></span>
+                <button class="td-button btn" data-clipboard-target="#tasknum">复制编号</button>
+            </section>
+            <hr class="line" />
+            <section class="td-center">
+                <aside class="td-step">
+                    <section class="td-step-title">
+                        <span>第一步：搜索货比别家宝贝</span>
+                        <span class="td-button">放弃任务</span>
+                    </section>
+                    <section class="td-step-content">
+                        <aside class="step-box-one">
+                            <span>①打开手机淘宝</span>
+                            <span>②确认淘宝账号是恒妞崽，如不是，请切换淘宝账号</span>
+                            <span>③确认您的收货地址信息为：</span>
+                            <span class="info">江西省南昌市西湖区 国贸天琴湾菜鸟驿站</span>
+                            <span class="info">昵称：<i>恒妞崽</i></span>
+                            <span class="info">收货人手机：<i>13767966541</i></span>
+                            <span class="info">收货人姓名：<i>曾云峰</i></span>
+                        </aside>
+                        <aside class="step-box-two">
+                            <span>1.搜索关键字<i>（关键词至可以在淘宝搜索框中手动输入，严禁复制关键词，每发现一次扣除2元）</i></span>
+                            <span class="keywords">关键词：<i>白衬衫女</i></span>
+                        </aside>
+                        <aside class="step-box-three">
+                            <span>2.随机浏览2个商品，上传每个商品顶部截图</span>
+                            <span class="screenshot">查看示例截图</span>
+                            <section class="screenshot-pic">
+                                <aside>
+                                    <input type="file" name="">
+                                    <div>
+                                        <p>选择文件</p>
+                                        <span>未选择文件</span>
+                                    </div>
+                                    <span class="screendesc">货比宝贝1</span>
+                                </aside>
+                                <aside>
+                                    <input type="file" name="">
+                                    <div>
+                                        <p>选择文件</p>
+                                        <span>未选择文件</span>
+                                    </div>
+                                    <span class="screendesc">货比宝贝2</span>
+                                </aside>
+                            </section>
+                        </aside>
+                    </section>
+                </aside>
+            </section>
+        </article>
+        <footer class="td-footer">
+            <aside class="left">
+                <span class="name">恒妞崽</span>
+                <span>请确认您当前使用的买号</span>
+            </aside>
+            <aside class="right">
+                <span>下一步</span>
+            </aside>
+        </footer>
+    </section>
+    <!-- 放弃任务 start-->
+    <section class="giveuptask">
+        <article class="giveupcontent">
+            <span class="title">请选择放弃任务原因：</span>
+            <div class="giveupselectdiv">
+                <label>
+                    <input type="radio" name="reason" class="reason" />
+                    <img class="giveupselect" src="images/labelselected.png" alt="选中">
+                    1 找不到商品
+                </label>
+                <label>
+                    <input type="radio" name="reason" class="reason" />
+                    <img class="giveupselect" src="images/labelselect.png" alt="未选中">
+                    2 垫付本金不对
+                </label>
+                <label>
+                    <input type="radio" name="reason" class="reason" />
+                    <img class="giveupselect" src="images/labelselect.png" alt="未选中">
+                    其他
+                </label>
+            </div>
+        </article>
+        <aside class="giveupdesc">
+            <span>每天可放弃2次，超过扣1豆豆一单</span>
+        </aside>
+        <aside class="giveupbutton">
+            <span>确定</span>
+        </aside>
+    </section>
+    <!-- 放弃任务 end-->
+    <script src="js/require.js" defer async="true" ></script>
+    <script src="js/require.js" data-main="js/main" id="current-page" current-page="taskdetail" target-module="taskdetail"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<view class="container">
+    <view class='content' wx:if="{{flag == true}}" wx:for="{{content}}">
+        <image wx:if="{{item.image}}" src="{{item.image}}"></image>
+        <text wx:if="{{item.text}}">{{item.text}}</text>
+    </view>
+    <view wx:if="{{flag == false}}" style="margin-top:100px;text-align:center;font-size:28rpx;">
+        <text>暂无此广告！！！</text>
+    </view>
+</view>

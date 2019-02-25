@@ -1,0 +1,44 @@
+<view class="container">
+    <view class="center">
+        <view class="area_buy_rent">
+            <view class="area_title">
+                <text class="area_torent text">附近小区列表</text>
+            </view>
+            <view class="area_content" wx:for="{{fujinxiaoqu}}" catchtap="showdetail" >
+                <view class="left" >
+                    <image class="goods_img" src="{{item.scimg}}" ></image>
+                </view>
+                <view class="right" >
+                    <view class="title" >
+                        <text>{{item.name}}</text>
+                    </view>
+                    <view class="address" > 
+                        <text>{{item.address}}</text>
+                    </view>
+                    <view class="prop">
+                        <block wx:for="{{item.biaoqian}}">
+                        <text class="prop{{index+1}}">{{item}}</text>
+                        </block>
+                    </view> 
+                        <view class="chankaojia">
+                        <text class="bold">参考均价：</text>
+                        <text>{{item.gaisi.junjia}}元</text>
+                    </view>
+                        <view class="forsale">
+                        <text class="bold">待售数量：</text>
+                        <text>{{item.gaisi.daishou}}</text>
+                    </view>
+                        <view class="forrent">
+                        <text class="bold">待租数量：</text>
+                        <text>{{item.gaisi.daizu}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+
+
+

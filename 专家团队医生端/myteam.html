@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的专家团队-广东省网络医院-医用端</title>
+<link href="css/team.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+$(function () {
+var txtwarp=$(".p_warp");
+for(var i=0; i<txtwarp.length; i++){
+	txtwarp.eq(i).css("height", "auto");
+	var pheight = txtwarp.eq(i).height();
+	txtwarp.eq(i).css("height", "38px");
+	if (pheight > 50) {
+		txtwarp.eq(i).find(".zk").show();
+	}
+}
+$(".zk").live("click", function () {
+	var Thisp = $(this).parent();
+	Thisp.css("height", "auto");
+	$(this).next().show();
+	$(this).hide();
+});
+$(".ss").live("click", function () {
+	var Thisp = $(this).parent();
+	Thisp.css("height", "38px");
+	$(this).prev().show();
+	$(this).hide();
+});
+
+
+//右下角悬浮框
+$(".fclose").click(function(){
+	$(".floatbox").css("display","none");
+});	
+
+$(".floatbox-l li") .click(function(){
+$(this).addClass("cur1").siblings().removeClass("cur1");
+$(".floatbox-r ul").hide();
+$(".floatbox-r ul").eq($(this).index()+0).show();
+});
+
+
+//简介文字超出展开收缩
+$("#show_hide").click(function(){
+	if($(this).attr("state") == "hide"){
+		$("#txtbox-show").html($("#txtbox").html());
+		$("#txtbox").animate({
+			height:$("#txtbox-show").height()
+		});
+		$(this).attr("state","show");
+		$(this).attr("value","收缩");
+	}else{
+		$("#txtbox").animate({
+			height:110
+		});
+		$(this).attr("state","hide");
+		$(this).attr("value","展开");
+	}
+});
+
+if($("#txtboxin").height() <= 110){
+	$("#show_hide").hide();
+}
+
+
+});
+</script>
+</head>
+
+<body>
+
+<div id="m_bj" class="header1">
+	
+    <div id="m_body" class="w1200">
+        <div id="nav_k">
+            <ul><li class="first"><a href="../Index.aspx">网络医院首页</a></li><li><a href="doctorIndex.aspx">网络门诊</a></li><li><a href="doctorConsumer.aspx">我的用户</a></li><li><a href="doctorComplaint.aspx">消息中心</a></li><li><a href="doctorRecipe.aspx?t=2">病历管理</a></li><li><a href="Report_doc_user_chart.aspx">报表中心</a></li><li><a href="doctorAccount.aspx?t=2">账户中心</a></li><li><a href="javascript:;" class="on">我的专家团队</a></li></ul>
+        </div>
+		
+		<div id="b_hx">
+			欢迎您！朱宁湖 医生<a title="退出登录" href="../Exit.aspx?type=2&amp;code=20140405001810961">退出</a>
+		</div>
+		
+    </div>
+       
+</div>
+
+<div class="main_k2 w1200">
+	<ul id="cur_nav"><li><a href="AdvisoryList.html">患者咨询</a></li><li><a href="myteam.html" class="on">我的专家团队</a></li></ul>
+</div>
+
+
+<style>
+#txtbox{max-height:110px; width:700px; overflow:hidden;}
+#txtbox-show{display:none; width:700px;}
+.showbtn{border:1px solid #e2e2e2; width:52px; height:24px; line-height:20px; font-size:12px; color:#bbb; text-align:center; background:#fff; display:inline-block;}
+.showbtn:hover{background:#5fb63c; border:1px solid #5fb63c; color:#fff;}
+</style>
+
+
+<div class="teamwarp w1200 c">
+	<h2 class="title_01">厚德精医专家团队<i></i></h2>
+    <div class="team_p">
+    	<h3>擅长：病毒性肝炎，肝硬化，慢性乙丙型病毒性肝炎，自身免疫性肝</h3>
+        
+        <div id="txtbox">
+            <div id="txtboxin">脸上长了雀斑，你是不是整天为此苦恼？那该怎恶魔去掉雀斑呢？要想从根本上去除雀斑，就要了解雀斑的生成原因，从根本上说，雀斑是因为内分泌失调，体内代谢废物沉积于面部而形成的。再加上日照时间过长，容易造成黑色素沉积，表现为雀斑的产生和加深。可见要想去除雀斑就必须从调整内分泌入手。今天我就教给大家几个淡化脸上雀斑的方法。
+
+秘方一：食盐祛斑法
+
+我们平时吃的食盐竟然有去斑的作用。具体做法：食盐一茶匙，白芷粉六茶匙，菊花粉三茶匙，白醋半茶匙，混和加水成糊状，敷于面部斑迹之处，隔日一次。
+
+秘方二:茶叶祛斑法
+
+1、茶汤洗脸
+晚上洗脸后，泡一杯茶，把茶汤涂到脸上、轻轻拍脸，或者将蘸了茶汤的棉布附在脸上，再用清水洗。脸上的茶色经过一夜能够自然消除，能够去除色斑、美白皮肤。
+2、茶叶面膜
+把面粉1匙和蛋黄1个，拌匀后加绿茶粉1匙。把它均匀地抹在洗净的脸上，20分钟后洗脸。还可把糖茶汤1匙和面粉1匙调匀，做成面膜15到20分钟后洗脸。能够消除粉刺，去除油脂。
+
+秘方三：柠檬片祛斑法
+
+将柠檬切片放入密闭的容器中，放入蜂蜜，加入凉水使得淹没柠檬片，盖好容器，放入冰箱。隔天拿出两片即可泡水了，一个柠檬能喝一个星期左右。
+柠檬含丰富的维生素C，可以很好的淡化黑斑、色斑，并有部分美白的效果。柠檬的美白功能不能小看，经常喝柠檬水美白绝对有惊人效果。柠檬皮还有丰富的钙质，所以为了达到理想的效果，最好还是连皮榨汁最有营养。
+
+秘方四：红糖祛斑法
+
+将大约一小勺的红糖倒入搅拌碗里，倒入三倍于红糖的蜂蜜，如果自身皮肤细腻，可多添加蜂蜜。搅拌均匀即可，放置五分钟沉淀一下。上面一层融入了红糖的蜂蜜就是上好排毒活颜磨砂膏啦!敷在湿润的脸上轻轻按摩后冲洗即可。红糖中含有多种营养成分，对肌肤的滋养可是起着很独到的功效，面膜不仅可使皮肤光滑美丽，还可促进皮肤的新陈代谢。
+将大约一小勺的红糖倒入搅拌碗里，倒入三倍于红糖的蜂蜜，如果自身皮肤细腻，可多添加蜂蜜。搅拌均匀即可，放置五分钟沉淀一下。上面一层融入了红糖的蜂蜜就是上好排毒活颜磨砂膏啦!敷在湿润的脸上轻轻按摩后冲洗即可。红糖中含有多种营养成分，对肌肤的滋养可是起着很独到的功效，面膜不仅可使皮肤光滑美丽，还可促进皮肤的新陈代谢。
+将大约一小勺的红糖倒入搅拌碗里，倒入三倍于红糖的蜂蜜，如果自身皮肤细腻，可多添加蜂蜜。搅拌均匀即可，放置五分钟沉淀一下。上面一层融入了红糖的蜂蜜就是上好排毒活颜磨砂膏啦!敷在湿润的脸上轻轻按摩后冲洗即可。红糖中含有多种营养成分，对肌肤的滋养可是起着很独到的功效，面膜不仅可使皮肤光滑美丽，还可促进皮肤的新陈代谢。
+将大约一小勺的红糖倒入搅拌碗里，倒入三倍于红糖的蜂蜜，如果自身皮肤细腻，可多添加蜂蜜。搅拌均匀即可，放置五分钟沉淀一下。上面一层融入了红糖的蜂蜜就是上好排毒活颜磨砂膏啦!敷在湿润的脸上轻轻按摩后冲洗即可。红糖中含有多种营养成分，对肌肤的滋养可是起着很独到的功效，面膜不仅可使皮肤光滑美丽，还可促进皮肤的新陈代谢。
+将大约一小勺的红糖倒入搅拌碗里，倒入三倍于红糖的蜂蜜，如果自身皮肤细腻，可多添加蜂蜜。搅拌均匀即可，放置五分钟沉淀一下。上面一层融入了红糖的蜂蜜就是上好排毒活颜磨砂膏啦!敷在湿润的脸上轻轻按摩后冲洗即可。红糖中含有多种营养成分，对肌肤的滋养可是起着很独到的功效，面膜不仅可使皮肤光滑美丽，还可促进皮肤的新陈代谢。
+将大约一小勺的红糖倒入搅拌碗里，倒入三倍于红糖的蜂蜜，如果自身皮肤细腻，可多添加蜂蜜。搅拌均匀即可，放置五分钟沉淀一下。上面一层融入了红糖的蜂蜜就是上好排毒活颜磨砂膏啦!敷在湿润的脸上轻轻按摩后冲洗即可。红糖中含有多种营养成分，对肌肤的滋养可是起着很独到的功效，面膜不仅可使皮肤光滑美丽，还可促进皮肤的新陈代谢。
+将大约一小勺的红糖倒入搅拌碗里，倒入三倍于红糖的蜂蜜，如果自身皮肤细腻，可多添加蜂蜜。搅拌均匀即可，放置五分钟沉淀一下。上面一层融入了红糖的蜂蜜就是上好排毒活颜磨砂膏啦!敷在湿润的脸上轻轻按摩后冲洗即可。红糖中含有多种营养成分，对肌肤的滋养可是起着很独到的功效，面膜不仅可使皮肤光滑美丽，还可促进皮肤的新陈代谢。
+将大约一小勺的红糖倒入搅拌碗里，倒入三倍于红糖的蜂蜜，如果自身皮肤细腻，可多添加蜂蜜。搅拌均匀即可，放置五分钟沉淀一下。上面一层融入了红糖的蜂蜜就是上好排毒活颜磨砂膏啦!敷在湿润的脸上轻轻按摩后冲洗即可。红糖中含有多种营养成分，对肌肤的滋养可是起着很独到的功效，面膜不仅可使皮肤光滑美丽，还可促进皮肤的新陈代谢。
+            </div>
+        </div>
+        <div id="txtbox-show"></div>
+        <input type="button" class="showbtn" state="hide" value="展开" id="show_hide">
+    </div>
+    
+    <div class="team_list">
+    	<dl>
+        	<dt><img src="images/01.jpg" /></dt>
+            <dd>
+            	<h2>郑少玲<span>首席</span></h2>
+                <p><span>中医科</span><span>普通话</span><span>广东省第二人民医院</span></p>
+                <div class="p_warp">
+                	要玩大数据，没有数据怎么玩？这里推荐一些33款开源爬虫软件给大家。 爬虫，即网络爬虫，是一程序。是搜索引擎的重要组成部分，因此搜索引擎优化很大程度上就是针对爬化要玩大数据，没有数据怎么玩？这里推荐一些33款开源爬虫软件给大家。 爬虫，即网络爬虫，是一程序。是搜索引擎的重要组成部分，因此搜索引擎优化很大程度上就是要玩大数据，没有数据怎么玩？这里推荐一些33款开源爬虫软件给大家。 爬虫，即网络爬虫，是一程序。是搜索引擎的重要组成部分，因此搜索引擎优化很大程度上就是针对爬化要玩大数据，没有数据怎么玩？这里推荐一些33款开源爬虫软件给大家。 爬虫，即网络爬虫，是一程序。是搜索引擎的重要组成部分，因此搜索引擎优化很大程度上就是针针对爬化
+                    <a class="zk" href="javascript:;">[展开]</a>
+                    <a class="ss" href="javascript:;">[收起]</a>
+                </div>
+            </dd>
+        </dl>
+        
+        <dl>
+        	<dt><img src="images/01.jpg" /></dt>
+            <dd>
+            	<h2>郑少玲<span>专家</span></h2>
+                <p><span>中医科</span><span>普通话</span><span>广东省第二人民医院</span></p>
+                <div class="p_warp">
+                	要玩大数据，没有数据怎么玩？这里推荐一些33款开源爬虫软件给大家。 爬虫，即网络爬虫，是一程序。是搜索引擎的重要组成部分，因此搜索引擎优化很大程度上就是针对爬化
+                    <a class="zk" href="javascript:;">[展开]</a>
+                    <a class="ss" href="javascript:;">[收起]</a>
+                </div>
+            </dd>
+        </dl>
+        
+        <dl>
+        	<dt><img src="images/01.jpg" /></dt>
+            <dd>
+            	<h2>郑少玲<span>专家</span></h2>
+                <p><span>中医科</span><span>普通话</span><span>广东省第二人民医院</span></p>
+                <div class="p_warp">
+                	要玩大数据，没有数据怎么玩？这里推荐一些33款开源爬虫软件给大家。 爬虫，即网络爬虫，是一程序。是搜索引擎的重要组成部分，因此搜索引擎优化很大程度上就是针对爬化是搜索引擎的重要组成部分，因此搜索引擎优化很大程度上就是针对爬化是搜索引擎的重要组成部分，因此搜索引擎优化很大程度上就是针对爬化是搜索引擎的重要组成部分，因此搜索引擎优化很大程度上就是针对爬化是搜索引擎的重要组成部分，因此搜索引擎优化很大程度上就是针对爬化是搜索引擎的重要组成部分，因此搜索引擎优化很大程度上就是针对爬化是搜索引擎的重要组成部分，因此搜索引擎优化很大程度上就是针对爬化
+                    <a class="zk" href="javascript:;">[展开]</a>
+                    <a class="ss" href="javascript:;">[收起]</a>
+                </div>
+            </dd>
+        </dl>
+        
+    </div>
+    
+</div>
+
+
+<style>
+.floatbox{width:330px; height:280px; position:fixed; bottom:10px; right:10px;/* border:1px solid #5fb63c;*/ background:#fff; border-top-right-radius:5px; border-bottom-right-radius:5px; box-shadow:0 2px 5px #999; overflow:hidden;}
+.floatbox-l{width:100px; height:300px; overflow-y:auto; background:#f2f2f2; float:left; overflow-x:hidden;}
+.floatbox-l ul li{line-height:44px; height:44px; cursor:pointer; width:77px; border-left:3px solid #f2f2f2; padding:0px 10px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;color:#666;}
+.floatbox-l ul li.cur1{background:#fff; width:87px; border-left:3px solid #71cb45; padding:0px 10px; color:#333; font-weight:bold;} 
+.floatbox-r{float:left; width:190px; padding:60px 20px 20px 20px; font-size:14px;}
+.floatbox-r h3{color:#333; border-bottom:1px solid #e0e0e0; padding-bottom:10px; margin-bottom:10px;}
+.floatbox-r ul{display:none;}
+.floatbox-r ul li{padding-top:20px;}
+.green{color:#71cb45; font-weight:bold;}
+.floatboxbtn {cursor:pointer; width:105px; background:#5eb63c; font-family:"Microsoft Yahei"; display:inline-block; line-height:34px; height:34px; color:#fff; text-align:center; text-decoration:none;font-size:16px; border-radius:4px; border:none;}
+.floatboxbtn:hover {background:#439424; color:#fff; text-decoration:none;}
+.fclose {width:19px; height:19px; text-indent:-9999px; background:url(images/close.png) no-repeat; position:absolute; display:block; right:15px; top:15px;}
+</style>
+
+<!----------右下角悬浮框------------->
+
+<div class="floatbox">
+     <div class="floatbox-l">
+          <ul>
+              <li class="cur1">张三丰</li>
+              <li>东方不败</li>
+              <li>杨过武功无敌高啊</li>
+              <li>天地会总舵主</li>
+              
+          </ul>
+     </div>
+     <div class="floatbox-r">
+          <a class="fclose" href="javascript:;"></a>
+          <ul style="display:block;">
+              <li>申请人：<span class="green">张三丰</span></li>
+              <li>申请时间：2015-10-28 15:30</li>
+          </ul>
+          
+          <ul>
+              <li>申请人：<span class="green">东方不败</span></li>
+              <li>申请时间：2015-10-28 15:30</li>
+          </ul>
+          
+           <ul>
+              <li>申请人：<span class="green">杨过武功无敌高啊</span></li>
+              <li>申请时间：2015-10-28 15:30</li>
+          </ul>
+          
+           <ul>
+              <li>申请人：<span class="green">天地会总舵主</span></li>
+              <li>申请时间：2015-10-28 15:30</li>
+          </ul>
+          
+          <p style="text-align:right; padding-top:95px; margin-right:-10px;">
+             <a style="color:#999; margin-right:20px;" href="">取消</a>
+             <a class="floatboxbtn" href="">接诊</a>
+          </p>
+     </div>
+</div>
+
+
+
+<div class="footer">
+	<div class="w1200 clearfix">
+        <p class="footnav">
+          <a href="../About.aspx">关于友德医</a>
+          <span>|</span>
+          <a href="../cooperation.aspx">合作联盟</a>
+          <span>|</span>
+          <a href="../privacy.aspx">隐私声明</a>
+          <span>|</span>
+          <a href="../feedback.aspx">意见反馈</a>
+        </p>
+        <p class="copy">COPYRIGHT&copy;2014&mdash;2015 友德医科技  粤ICP备案15089180号-1</p>
+	</div>
+</div>
+
+</body>
+</html>

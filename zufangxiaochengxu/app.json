@@ -1,0 +1,57 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/chuzu/chuzu",
+    "pages/public_room/public_room",
+    "pages/my_tracks/my_tracks",
+    "pages/landlord/landlord",
+    "pages/areasevies/areasevies",
+    "pages/buy_rent/buy_rent",
+    "pages/chushou/chushou",
+    "pages/mine/mine",
+    "pages/roomdetatils/roomdetatils",
+    "pages/pipeimaijia/pipeimaijia",
+    "pages/qiugouqiuzu/qiugouqiuzu",
+    "pages/bianji/bianji",
+    "pages/bianjichuzu/bianjichuzu",
+    "pages/fujinxiaoqu/fujinxiaoqu",
+    "pages/mycollect/mycollect",
+    "pages/areadetails/areadetails",
+    "pages/mypublic/mypublic",
+    "pages/bianjixiaoqu/bianjixiaoqu"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color":"#000",
+    "selectedColor":"#02A9FF",
+    "backgroundColor":"#fff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath":"images/index.png",
+      "selectedIconPath":"images/index_selected.png"
+    },{
+        "pagePath": "pages/public_room/public_room",
+        "text": "发布需求",
+        "iconPath":"images/public_room.png",
+        "selectedIconPath":"images/public_room_selected.png"
+    },{
+        "pagePath": "pages/areasevies/areasevies",
+        "text": "社区服务中心",
+        "iconPath":"images/areasevies.png",
+        "selectedIconPath":"images/areasevies_selected.png"
+    },{
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath":"images/mine.png",
+        "selectedIconPath":"images/mine_selected.png"
+    }]
+  },
+  "debug":true
+}

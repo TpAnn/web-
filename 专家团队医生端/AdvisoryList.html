@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>患者咨询-广东省网络医院-医用端</title>
+<link href="css/team.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/laydate.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+</head>
+
+<body>
+
+<div id="m_bj">
+	
+    <div id="m_body" class="w1200">
+        <div id="nav_k">
+            <ul><li class="first"><a href="../Index.aspx">网络医院首页</a></li><li><a href="doctorIndex.aspx">网络门诊</a></li><li><a href="doctorConsumer.aspx">我的用户</a></li><li><a href="doctorComplaint.aspx">消息中心</a></li><li><a href="doctorRecipe.aspx?t=2">病历管理</a></li><li><a href="Report_doc_user_chart.aspx">报表中心</a></li><li><a href="doctorAccount.aspx?t=2">账户中心</a></li><li><a href="javascript:;" class="on">我的专家团队</a></li></ul>
+        </div>
+		
+		<div id="b_hx">
+			欢迎您！朱宁湖 医生<a title="退出登录" href="../Exit.aspx?type=2&amp;code=20140405001810961">退出</a>
+		</div>
+		
+    </div>
+       
+</div>
+
+<div class="main_k2 w1200">
+	<ul id="cur_nav"><li><a href="AdvisoryList.html" class="on">患者咨询</a></li><li><a href="myteam.html">我的专家团队</a></li></ul>
+</div>
+
+<div class="teamwarp w1200 c">
+	<div class="team_nav">
+    	<p>
+        	<a class="cur" href="javascript:;">待回复</a>
+        	<a href="AdvisoryList2.html">已回复</a>
+        </p>
+    </div>
+    
+    <div class="optionbox c">
+    	<div class="fl">
+        	<span class="fl">咨询日期：</span>
+            <input type="text" name="" value="" id="date1" class="text time fl">
+            <span class="time-jg">至</span>
+            <input type="text" name="" value="" id="date2" class="text time fl">
+        </div>
+        <div class="fr">
+        
+<style>
+.semsy{width:138px;*width:126px; height:40px; *height:28px; border:1px solid #e2e2e2; border-radius:3px; overflow:hidden; float:left; margin-right:30px; position:relative; *padding:6px; *margin-left:3px;}
+.semsy div {*border:0; position:relative; *width:100%;*height:18px;*overflow:hidden;*background:#fff;}
+.semsy i {height:40px; width:25px; background:#fff url(images/dataimg2.png) no-repeat 5px center; position:absolute; right:0; top:0; display:block;pointer-events:none;display:none\9;}
+.semsy select { width:100%;width:97%\9; *width:101%;color:#666;padding:9px 0px; float:left; font-size:14px; background:none;*margin:-2px;line-height:22px;border:0 none;*border:1px solid #ccc;}
+</style>
+        
+        
+<div class="semsy">
+      <div>
+       <select class="fl" id="state"><option value="0">全部</option><option value="1">已申请</option><option value="2">已确认</option><option value="3">已接诊</option><option value="4">已完成</option><option value="5">已取消</option></select>
+      </div>
+      <i></i>
+</div>
+             
+             
+        
+        	<div class="input_warp fl">
+                <i>-请输入咨询人、咨询内容-</i>
+                <input type="text" id="whmain" name="">
+            </div>
+            <a style="margin-left:20px;" class="button_green btn120 fl" href="javascript:searchfor();">搜索</a>
+        </div>
+    </div>
+    
+    <div class="tab_warp">
+    	<table class="tab_list">	
+            <tr>
+                <th width="14%">咨询人</th>
+                <th width="14%">手机号码</th>
+                <th width="30%">问题描述</th>
+                <th width="14%">咨询时间</th>
+                <th width="14%">状态</th>
+                <th width="14%">操作</th>
+            </tr>
+            <tr>
+            	<td>张三</td>
+                <td>13800124563</td>
+                <td>头痛、头晕、脑抽筋,头痛、头晕</td>
+                <td>2015-10-28  15:30</td>
+                <td>待回复</td>
+                <td><a href="javascript:Replywarp('张三','02022133','318','1')">回复</a></td>
+            </tr>
+            <tr class="cur">
+            	<td>张三</td>
+                <td>13800124563</td>
+                <td>头痛、头晕、脑抽筋,头痛、头晕</td>
+                <td>2015-10-28  15:30</td>
+                <td>待回复</td>
+                <td><a alt="2" href="javascript:;">回复</a></td>
+            </tr>
+            <tr>
+            	<td>张三</td>
+                <td>13800124563</td>
+                <td>头痛、头晕、脑抽筋,头痛、头晕</td>
+                <td>2015-10-28  15:30</td>
+                <td>待回复</td>
+                <td><a alt="2" href="javascript:;">回复</a></td>
+            </tr>
+            <tr class="cur">
+            	<td>张三</td>
+                <td>13800124563</td>
+                <td>头痛、头晕、脑抽筋,头痛、头晕</td>
+                <td>2015-10-28  15:30</td>
+                <td>待回复</td>
+                <td><a alt="2" href="javascript:;">回复</a></td>
+            </tr>
+            <tr>
+            	<td>张三</td>
+                <td>13800124563</td>
+                <td>头痛、头晕、脑抽筋,头痛、头晕</td>
+                <td>2015-10-28  15:30</td>
+                <td>待回复</td>
+                <td><a alt="2" href="javascript:;">回复</a></td>
+            </tr>
+            <tr class="cur">
+            	<td>张三</td>
+                <td>13800124563</td>
+                <td>头痛、头晕、脑抽筋,头痛、头晕</td>
+                <td>2015-10-28  15:30</td>
+                <td>待回复</td>
+                <td><a alt="2" href="javascript:;">回复</a></td>
+            </tr>
+		</table>
+        
+        <div class="page-box">
+           <button onclick="gopage(1)" type="button" class="firstpage yahei">首页</button>
+           <a style="cursor:default;" class="page-prev" href="javascript:">&nbsp;</a><span>1</span><a style="cursor:default;" class="page-next" href="javascript:">&nbsp;</a><button onclick="gopage(1)" type="button" class="lastpage yahei">最后一页</button>
+            <input type="text" maxlength="3" onkeydown="if(event.keyCode==13){GoDoctorPage();}" onafterpaste="this.value=this.value.replace(/\D/g,'')" onkeyup="this.value=this.value.replace(/\D/g,'')" id="txtpage" class="page-box-input">
+            <button onclick="GoDoctorPage();" type="button" class="page-box-btn yahei">跳转</button>
+         </div>
+        
+    </div>
+    
+</div>
+
+<div class="footer">
+	<div class="w1200 clearfix">
+        <p class="footnav">
+          <a href="../About.aspx">关于友德医</a>
+          <span>|</span>
+          <a href="../cooperation.aspx">合作联盟</a>
+          <span>|</span>
+          <a href="../privacy.aspx">隐私声明</a>
+          <span>|</span>
+          <a href="../feedback.aspx">意见反馈</a>
+        </p>
+        <p class="copy">COPYRIGHT&copy;2014&mdash;2015 友德医科技  粤ICP备案15089180号-1</p>
+	</div>
+</div>
+
+<script language="javascript">
+//日期范围限制
+var start = {
+    elem: '#date1',
+    format: 'YYYY-MM-DD',
+    min: '1999-01-01', //设定最小日期为当前日期
+    max: laydate.now(), //最大日期
+    istime: true,
+    istoday: false,
+    choose: function(datas){
+         end.min = datas; //开始日选好后，重置结束日的最小日期
+         end.start = datas //将结束日的初始值设定为开始日
+    }
+};
+
+var end = {
+    elem: '#date2',
+    format: 'YYYY-MM-DD',
+    min: '1999-01-01',
+    max: laydate.now(),
+    istime: true,
+    istoday: false,
+    choose: function(datas){
+        start.max = datas; //结束日选好后，重置开始日的最大日期
+    }
+};
+laydate(start);
+laydate(end);
+
+</script>
+</body>
+</html>

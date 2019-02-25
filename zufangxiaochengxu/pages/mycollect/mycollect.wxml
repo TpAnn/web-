@@ -1,0 +1,76 @@
+<view class="container">    
+    <view class="clear"></view>
+    <view class="center">
+        <view class="area_buy_rent">
+            <block wx:if="{{choose == true}}">
+                    <view class="area_title">
+                        <text class="area_tobuy text">房源收藏</text>
+                        <text class="area_torent" catchtap="collect">小区收藏</text>
+                    </view>
+                    <view class="area_content" wx:for="{{roomsc}}" style="height:220rpx;" wx:key="roomsc" data-id="{{item.id}}" catchtap="showdetail">
+                        <view class="left" style="width:29.5vw;height:174rpx;">
+                            <image class="goods_img" src="{{item.imgarray[0]}}" style="width:220rpx;height:174rpx;"></image>
+                        </view>
+                        <view class="right" style="width:63vw;height:170rpx;margin-bottom:5rpx;">
+                            <view class="title" style="width:63vw;">
+                                <text>户型{{item.huxing}} 朝向{{item.chaoxiang}} 楼层{{item.louceng}} 楼栋{{item.loudong}} 面积{{item.mianji}}</text>
+                            </view>
+                            <view class="desc">
+                                <text>{{item.huxing}} {{item.mianji}}平 {{item.chaoxiang}}</text>
+                            </view>
+                            <view class="address" style="width:62vw; margin:10rpx 0 10rpx 0 ; ">
+                                <text>{{item.address}}</text>
+                                <text class="price">{{item.money / 10000}}万元</text>
+                            </view>  
+                            <view class="prop" style="width:62vw;margin-top:15rpx;">
+                                <block wx:for="{{item.biaoqian}}" wx:key="biaoqian1">
+                                    <text class="prop{{index+1}}">{{item}}</text> 
+                                </block>
+                            </view>    
+                        </view>
+                    </view>
+                </block>
+                <block wx:if="{{choose == false}}">
+                    <view class="area_title">
+                        <text class="area_tobuy" catchtap="my_tracks">房源收藏</text>
+                        <text class="area_torent text">小区收藏</text>
+                    </view>
+                    <view class="area_content" wx:for="{{commsc}}" wx:key="commsc" data-id="{{item.id}}" catchtap="showdetail">
+                        <view class="left">
+                            <image class="goods_img" src="{{item.scimg}}"></image>
+                        </view>
+                       <view class="right" >
+                            <view class="title" style="width:58vw;">
+                                <text>{{item.name}}</text>
+                            </view>
+                            <view class="address" > 
+                                <text>{{item.address}}</text>
+                            </view>
+                            <view class="prop" >
+                                <block wx:for="{{item.biaoqian}}" wx:key="biaoqian3">
+                                <text class="prop{{index+1}}">{{item}}</text>
+                                </block>
+                            </view> 
+                            <view class="chankaojia">
+                                <text class='gray'>参考均价：</text>
+                                <text class="bold">{{item.gaisi.junjia}}元</text>
+                            </view>
+                                <view class="forsale">
+                                <text class="gray">待售：</text>
+                                <text class="bold">{{item.gaisi.daishou}}套</text>
+                            </view>
+                                <view class="forrent">
+                                <text class="gray">待租：</text>
+                                <text class="bold">{{item.gaisi.daizu}}套</text>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+        </view>
+    </view>
+</view>
+
+
+
+
+

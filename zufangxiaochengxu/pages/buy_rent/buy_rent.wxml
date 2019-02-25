@@ -1,0 +1,150 @@
+ <view class="container" wx:if="{{searchareaflag == true}}">
+    <view class="top">
+        <view class="leftlocation">
+            <text>{{leftlocation}}</text>
+        </view>
+        <view class="topsearch">
+                <view class="centerimage">
+                    <image src="/images/search.png"></image>
+                </view>
+                <view class="rightinput">
+                    <input type="text" confirm-type="search" bindfocus="searchfocus" placeholder="请输入小区名称或地址" placeholder-style='color:#ccc;' name="address"></input>
+                </view>
+        </view>
+    </view> 
+    <view class="clear"></view>
+    <view class="center">
+        <view class="area_buy_rent">
+            <block wx:if="{{choose == true}}">
+                <view class="area_title">
+                    <text class="area_tobuy text">{{area_tobuy}}</text>
+                    <text class="area_torent" catchtap="collect">{{area_torent}}</text>
+                </view>
+                <view class="area_content" wx:for="{{xiaoquzaishou}}" wx:key="xiaoquzaishou" data-id="{{item.id}}" catchtap="showdetail">
+                    <view class="left">
+                        <image class="goods_img" src="{{item.imgsrc[0]}}"></image>
+                    </view>
+                    <view class="right">
+                        <view class="title">
+                            <text>户型{{item.huxing}} 朝向{{item.chaoxiang}} 楼层{{item.louceng}} 楼栋{{item.loudong}} 面积{{item.mianji}}</text>
+                        </view>
+                        <view class="desc">
+                            <text>{{item.huxing}} {{item.mianji}}平 {{item.chaoxiang}}</text>
+                        </view>
+                        <view class="address">
+                            <text>{{address}}</text>
+                            <text class="price">{{item.money / 10000}}万元</text>
+                        </view>  
+                        <view class="prop">
+                            <block wx:for="{{item.biaoqian}}" wx:key="biaoqian1">
+                                <text class="prop{{index+1}}">{{item}}</text> 
+                            </block>
+                        </view>   
+                    </view>
+                </view>
+                <view class="moreview" wx:if="{{getmoreroom == false}}">
+                    <text catchtap="getmoreroom">更多</text>
+                </view>
+                <view class="moreview" wx:if="{{shouqiroom == false}}">
+                    <text catchtap="shouqiroom">收起</text>
+                </view>
+            </block>
+            <block wx:if="{{choose == false}}">
+                <view class="area_title">
+                    <text class="area_tobuy" catchtap="my_tracks">{{area_tobuy}}</text>
+                    <text class="area_torent text">{{area_torent}}</text>
+                </view>
+                <view class="area_content" wx:for="{{xiaoquzaizu}}" wx:key="xiaoquzaizu" data-id="{{item.id}}"  catchtap="showdetail">
+                    <view class="left">
+                        <image class="goods_img" src="{{item.imgsrc[0]}}"></image>
+                    </view>
+                    <view class="right">
+                        <view class="title">
+                            <text>户型{{item.huxing}} 朝向{{item.chaoxiang}} 楼层{{item.louceng}} 楼栋{{item.loudong}} 面积{{item.mianji}}</text>
+                        </view>
+                        <view class="desc">
+                            <text>{{item.huxing}} {{item.mianji}}平 {{item.chaoxiang}}</text>
+                        </view>
+                        <view class="address">
+                            <text >{{address}}</text>
+                            <text class="price">{{item.money}}元</text>
+                        </view>  
+                        <view class="prop">
+                            <block wx:for="{{item.biaoqian}}" wx:key="biaoqian2">
+                                <text class="prop{{index+1}}">{{item}}</text> 
+                            </block>
+                        </view>    
+                    </view>
+                </view>
+                <view class="moreview" wx:if="{{getmoreroom2== false}}">
+                    <text catchtap="getmoreroom2">更多</text>
+                </view>
+                <view class="moreview" wx:if="{{shouqiroom2 == false}}">
+                    <text catchtap="shouqiroom2">收起</text>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="bottom">
+        <view class="title">
+            <view class="title1">
+                <text>{{tuijiantxt}}</text>
+            </view>
+            <view class="title2" catchtap="getmore">
+                <text>更多</text>
+            </view>
+        </view>
+        <view class="clear"></view>
+        <view class="area_content" wx:for="{{fujinxiaoqu}}" wx:key="fujinxiaoqu" data-commid="{{item.id}}" data-commname="{{item.name}}" catchtap="funjinxiaoqu">
+            <view class="left">
+                <image class="goods_img" src="{{item.scimg}}"></image>
+            </view>
+            <view class="right">
+                <view class="title">
+                    <text>{{item.name}}</text>
+                </view>
+                <view class="address"> 
+                    <text>{{item.address}}</text>
+                </view>
+                <view class="prop">
+                    <block wx:for="{{item.biaoqian}}" wx:key="biaoqian3">
+                    <text class="prop{{index+1}}">{{item}}</text>
+                    </block>
+                </view> 
+                <view class="chankaojia">
+                    <text class="gray">参考均价：</text>
+                    <text>{{item.gaisi.junjia}}元</text>
+                </view>
+                    <view class="forsale">
+                    <text class="gray">待售：</text>
+                    <text>{{item.gaisi.daishou}}套</text>
+                </view>
+                    <view class="forrent">
+                    <text class="gray">待租：</text>
+                    <text>{{item.gaisi.daizu}}套</text>
+                </view>
+            </view>
+        </view>
+    </view>   
+ </view>
+<!-- 点击搜索显示小区 -->
+<view class="container containersearcharea"  wx:if="{{searchareaflag == false}}">
+    <view class="top topsearcharea">
+        <view class="focustopsearch">
+            <view class="specinput">
+                <input class="focusinput" type="text" bindconfirm="search" bindinput="searchinput" confirm-type="search" focus="true" placeholder-style='color:#ccc;font-size:28rpx;' placeholder="请输入小区名称或地址" name="address"></input>
+            </view>
+            <view class="specimage" catchtap="search">
+                <image src="/images/search.png"></image>
+            </view>
+        </view>
+        <view class="cancel" catchtap="hiddensearch">
+            <text>取消</text>
+        </view>
+    </view>
+    <view class="clear"></view>
+    <view class="showcontent" wx:for="{{datas1}}" wx:key="datas1" data-commname="{{item.name}}" data-id="{{index}}" catchtap="funjinxiaoqu">
+        <text>{{item.name}}</text>
+        <text>{{item.address}}</text>
+    </view>
+</view>

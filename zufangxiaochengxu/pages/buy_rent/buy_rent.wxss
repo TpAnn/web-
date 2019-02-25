@@ -1,0 +1,441 @@
+.container{
+    width:100%;
+    float:left;
+}
+.top{
+    width:99%;
+    height: 64rpx;
+    line-height: 64rpx;
+    margin:auto;
+    margin-top:20rpx;
+}
+.top .topsearch{
+    width:82%;
+    height: 60rpx;
+    float:right;
+    margin-right:20rpx;
+    background-color: #e6e6e6;
+    border:0;
+    border-radius: 8rpx;
+}
+.top .focustopsearch{
+    width:80%;
+    margin:0;
+    float:left;
+    margin-left:20rpx;
+    border:0;
+    background-color: #e6e6e6;
+    border-radius: 8rpx;
+}
+.topsearch image,
+.focustopsearch image{
+    width:40rpx;
+    height: 40rpx;
+    margin-top:12rpx;
+}
+.leftlocation{
+    float:left;
+    margin-left:20rpx;
+    
+}
+.topsearch .centerimage{
+    float:left;
+    margin-left:20rpx;
+    height: 64rpx;
+}
+.focustopsearch .specimage{
+    float:left;
+    margin-left:20rpx;
+    height: 64rpx;
+}
+.topsearch .rightinput{
+    float:right;
+}
+.focustopsearch .specinput{
+    float:left;
+    margin-left:30rpx;
+}
+.focustopsearch .specinput input{
+    width:65vw;
+    margin-top:6rpx;
+}
+.topsearch .rightinput input{
+    width:70vw;
+    height: 64rpx;
+    font-size:28rpx;
+    padding-left:20rpx;
+}
+.top .cancel{
+    float:right;
+    width:16%;
+    text-align: center;
+    height: 64rpx;
+}
+.top .cancel text{
+    font-size:28rpx;
+}
+.center{
+    width:100%;
+    float:left;
+    border-bottom:20rpx solid #f2f2f2;
+}
+.center .titles{
+    width:100%;
+    float:left;
+}
+.center .titles view{
+    float:left;
+    width:50%;
+    text-align: center;
+}
+.area_buy_rent{
+    width:100%;
+    margin-bottom:20rpx;
+}
+.area_title{
+    width:99%;
+    display: block;
+    text-align: center;
+    border:#fff 1rpx solid;
+    height: 65rpx;
+   
+}
+.area_title .area_tobuy{
+    font-size:32rpx;
+    float:left;
+    width: 50%;
+    height: 65rpx;
+    display: block;
+    line-height: 65rpx;
+
+}
+.area_title .area_torent{
+    font-size:32rpx;
+    float:right;
+     width:50%;
+     height: 65rpx;
+     line-height: 65rpx;
+     display:block; 
+    
+} 
+.area_title .text{
+    color:#02A9FF;
+    border-bottom:#02A9FF 5rpx solid;
+}
+
+.gray{
+    color:#666;
+}
+.area_content{
+    float:left;
+    width:99%;
+    margin:auto;
+  /*  height: 240rpx;*/
+   /* border-bottom:1rpx solid #eee;*/
+}
+.area_content .left{
+    width:32vw;
+    height: 170rpx;
+    margin-top:30rpx; 
+    display: inline-block;
+}
+.goods_img{
+    width:220rpx;
+    height: 170rpx;
+    margin-left:10px;
+
+}
+.area_content .right{
+    width:64vw;
+    margin-top:30rpx;
+    float:right;
+}
+.area_content .right .title{
+    width:58vw;
+    font-weight: bold;
+    font-size:28rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}   
+.area_content .right .desc{
+    width:64vw;
+    font-size:23rpx;
+    color:#999;
+    line-height:45rpx;
+}
+.area_content .right .chankaojia{
+    width:58vw;
+    float:left;
+    font-size:22rpx;
+    display: block;
+    line-height: 37rpx;
+}
+.area_content .right .forsale{
+     width:28vw;
+    float:left;
+    font-size:22rpx;
+    display: block;
+    line-height: 27rpx;
+}
+.area_content .right .forrent{
+     width:28vw;
+    float:left;
+    font-size:21rpx;
+    display: block;
+    line-height: 27rpx;
+}
+.area_content .right .address{
+    width:58vw;
+    font-size:24rpx;
+    color:#999;
+    line-height: 55rpx;
+}
+
+.bold{ font-size: 22rpx; color:#333;  }
+.area_content .right .price{
+    float:right;
+    color:red;
+    font-weight:bold;
+    font-size:30rpx;
+}
+.gray{
+ color:#666;
+}
+.area_content .right .address image{
+    width:40rpx;
+    height: 40rpx;
+    float:right;
+    margin-right: 10rpx;
+   
+}
+.area_content .right .prop{
+    width:58vw;
+    margin-top: 2rpx;
+}
+button{
+    box-sizing: none;
+}
+.area_content .right .prop text{
+    padding:0;
+    margin:0;
+    font-size:20rpx;
+    width: auto;
+    line-height: 33rpx;
+    margin-left:10rpx;
+    color:#BDE1C1;
+    float:left;
+    border-radius: 10rpx;
+    padding-left:8rpx;
+    padding-right:8rpx;
+}
+.area_content .right .prop text.prop1{
+    margin-left:0;
+    color:#ec843b;
+    background-color: #f5e1e3;
+}
+.area_content .right .prop text.prop2{
+    color:#2fc48d;
+    background-color:#e1f5ee;
+}   
+.area_content .right .prop text.prop3{
+    color:#f05858;
+    background-color:#f5e1e1;
+}
+.area_content .right .prop text.prop4{
+    color:#429de5;
+    background-color:#e1ecf5;
+}
+.bottom{
+    width:100%;
+    float:left;
+    margin-top:20rpx;
+}
+.bottom .title view.title1{
+    float:left;
+    margin-left:20rpx;
+    font-size:30rpx;
+}
+.bottom .title view.title2{
+    float:right;
+    margin-right:20rpx;
+}
+.bottom .title view.title2 text{
+    color:#999;
+    font-size:32rpx;
+}
+.bottom .area_content{
+    margin-top:20rpx;
+}
+.moreview{
+    width:100%;
+    text-align: center;
+    font-size:28rpx;
+}
+/* 点击搜索显示小区 */
+.container.containersearcharea{
+    background-color:#fff;
+}
+.top.topsearcharea{
+    width:100%;
+    float:left;
+    margin-top:0 !important;
+    padding-top:20rpx;
+    padding-bottom:20rpx;
+    background-color:#f3f3f3;
+}
+.top .focustopsearch{
+    width:80%;
+    margin:0;
+    float:left;
+    margin-left:20rpx;
+    border:0;
+    background-color:#e6e6e6;
+    border-radius:8rpx;
+}
+.top .cancel{
+    float:right;
+    width:16%;
+    text-align:center;
+    height:64rpx;
+
+}
+.top .cancel text{
+    font-size:28rpx;
+}
+.focustopsearch .specinput{
+    float:left;
+    margin-left:30rpx;
+}
+.focustopsearch .specinput input{
+    width:65vw;
+    margin-top:6rpx;
+}
+.focustopsearch .specimage{
+    float:left;
+    margin-left:20rpx;
+    height:64rpx;
+
+}
+.focustopsearch .specimage image{
+    width:40rpx;
+    height:40rpx;
+    margin-top:12rpx;
+}
+.showcontent{
+    width:96%;
+    height: 105rpx;
+    margin:20rpx auto 0 auto;
+    background-color:#fff;
+    border-bottom:2rpx solid #eee;
+}
+.showcontent text{
+    margin-left:20rpx;
+    display: block;
+    font-size:28rpx;
+}
+.showcontent text:last-child{
+    margin-top:10rpx;
+    color:#ccc;
+}
+
+/* 附近小区 */
+.bottom .title{
+    width:100%;
+    float:left;
+    margin-bottom:20rpx;
+}
+.bottom .area_content{
+	float:left;
+width:100%;
+margin:auto;
+height:220rpx;
+border-top:1px solid #eee;
+padding-bottom:10rpx;
+}
+.bottom .area_content .left{
+	width:32vw;
+height:170rpx;
+margin-top:30rpx;
+display:inline-block;
+}
+.bottom .area_content .left .goods_img{
+	width:220rpx;
+height:170rpx;
+margin-left:10px;
+}
+.bottom .area_content .right {
+	width:65vw;
+margin-top:30rpx;
+float:right;
+height:170rpx;
+margin-bottom:5rpx;
+}
+.bottom .area_content .right .title{
+	width:58vw;
+font-weight:bold;
+font-size:24rpx;
+overflow:hidden;
+text-overflow:ellipsis;
+white-space:nowrap;
+margin-bottom:0;
+}
+.bottom .area_content .right .address{
+	width:58vw;
+font-size:24rpx;
+color:#999;
+line-height:37rpx;
+}
+.bottom .area_content .right .prop{
+	width:58vw;
+margin-top:5rpx;
+}
+.bottom .area_content .right .prop text.prop1{
+	margin-left:0;
+color:#ec843b;
+background-color:#f5e1e3;
+}
+.bottom .area_content .right .prop text{
+	padding:0;
+margin:0;
+font-size:20rpx;
+width:auto;
+line-height:33rpx;
+float:left;
+border-radius:10rpx;
+padding-left:8rpx;
+padding-right:8rpx;
+}
+.bottom .area_content .right .prop text.prop2{
+	color:#2fc48d;
+background-color:#e1f5ee;
+margin-left:10rpx;
+}
+.bottom .area_content .right .chankaojia{
+	width:58vw;
+float:left;
+font-size:22rpx;
+display:block;
+padding-top:5rpx;
+line-height: 36rpx;
+}
+.bottom .area_content .right .chankaojia .bold,
+.bottom .area_content .right .forsale .bold,
+.bottom .area_content .right .forrent .bold{
+	font-size:22rpx;
+    font-weight: normal;
+}
+.bottom .area_content .right .forsale{
+	width:28vw;
+float:left;
+font-size:22rpx;
+display:block;
+line-height:28rpx;
+}
+.bottom .area_content .right .forrent{
+	width:28vw;
+float:left;
+font-size:21rpx;
+display:block;
+line-height:28rpx;
+}

@@ -1,0 +1,427 @@
+.cotainer{
+    width:100%;
+    float:left;
+}
+swiper{
+    height: 400rpx;
+}
+
+.swiper_image{  
+    width:100%;
+    height: 400rpx;
+}
+.top{
+    width:100%;
+    float:left;
+    border-bottom:20rpx solid #f2f2f2;
+}
+.top .title{
+    padding:20rpx;
+    line-height: 1;
+}
+.top .title text{
+    font-size:30rpx;    
+    font-weight: bold;
+}
+.top .titlebottom{
+    width:100%;
+    float:left;
+    height: 100rpx;
+    line-height: 100rpx;
+}
+.top .titlebottom .address{
+    float:left;
+    margin-left: 20rpx;
+}
+.top .titlebottom .collect{
+    line-height: 1;
+    margin-right:20rpx;
+    position: absolute;
+     right: 0;
+     z-index: 1111;  
+}
+.top .titlebottom .collect .collected{
+    color:#333;
+}
+.blue{
+    color:#02A9FF;
+}
+.xq-bottom{
+   /* border-bottom:#eee 1px solid ; */
+    padding:10rpx 0 10rpx 0;
+    width: 100%;
+}
+
+.top .titlebottom .collect text{
+    color:#999;
+}
+.top .titlebottom .address image{
+    width:50rpx;
+    height:50rpx;
+    display: block;
+    float:right;
+    margin-top: 20rpx;
+    margin-left:20rpx;
+}
+.top .titlebottom .collect image{
+    width:50rpx;
+    height: 50rpx;
+    display:block;
+    margin: auto;
+}
+.top .titlebottom text{
+    font-size:28rpx;
+}
+.center{
+    width:100%;
+    float:left;
+}
+.center .roominfos{
+    width:100%;
+    float:left;
+    margin-top:40rpx;
+}
+.roominfos .one{
+    width:100%;
+    float:left;
+    padding-bottom:40rpx;
+    border-bottom:1rpx solid #f6f6f6;
+}
+.roominfos .one view{
+    float:left;
+    /* padding: 0 8.5%; */
+    width:33.1%;
+    text-align: center;
+}
+.roominfos .one view.rightborder{
+    border-right:1rpx solid #f6f6f6;
+}
+.roominfos .one view text{
+    font-size:32rpx;
+}
+.roominfos .one view text.shoujiavalue{
+    color:#02A9FF;
+    font-weight: bold;
+}
+.roominfos .one view text.spec{
+    display:block;
+    color:#999;
+    font-size:28rpx;
+}
+.roominfos .two{
+    width:100%;
+    float:left;
+    margin-top:40rpx;
+    padding-bottom: 40rpx;
+    border-bottom: 20rpx solid #f2f2f2;
+}
+.roominfos .two view{
+    float:left;
+    width:47%;
+    height: 50rpx;
+    margin-left:3%;
+    padding-bottom: 10rpx;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.roominfos .two view text{
+    font-size:28rpx;
+    color:#666;
+}
+.roominfos .two view text.spec{
+    color:#999;
+    font-size:28rpx;
+}
+.center .roomguarantee{
+    width:100%;
+    float:left;
+}
+.roomguarantee .titles{
+    width:100%;
+    float:left;
+    margin-top:50rpx;
+    padding-bottom:50rpx;
+    border-bottom:1rpx solid #eee;
+}
+.roomguarantee .titles text.spec{
+    display: block;
+    float:left;
+    width:72%;
+    font-size:32rpx;
+    margin-left:20rpx;
+}
+.roomguarantee .titles view{
+    float:right;
+    margin-right:20rpx;
+}
+.roomguarantee .titles view text{
+    font-size:30rpx;
+    color:#999;
+    line-height: 45rpx;
+}
+.roomguarantee .titles view image{
+    width:30rpx;
+    height: 30rpx;
+    display: block;
+    float:right;
+    margin-top:15rpx;
+}
+.roomguarantee .icons{
+    width:100%;
+    float:left;
+}
+.roomguarantee .icons view{
+    width:47%;
+    height: 112rpx;
+    padding-left:2%;
+    padding-top: 20rpx;
+    padding-bottom:20rpx;
+    float:left;
+    text-align: center;
+    line-height: 45rpx;
+}
+.roomguarantee .icons view.third,
+.roomguarantee .icons view.last{
+    margin-bottom:40rpx;
+}
+.roomguarantee .icons view image{
+    width:80rpx;
+    height:80rpx;
+    display:block;
+    margin:auto;
+}
+.roomguarantee .icons view text{
+    font-size:28rpx;
+}
+.bottom{
+    width:100%;
+    float:left;
+    margin-bottom: 40rpx;
+}
+.bottom .titles{
+    height: 100rpx;
+    line-height: 100rpx;
+    padding-left:20rpx;
+    border-bottom:1rpx solid #eee;
+    border-top:20rpx solid #f2f2f2;
+}
+.bottom .titles text{
+    font-size:32rpx;
+    font-weight: bold;
+}
+.bottom .map,
+.bottom .map .mapname{
+    width:100%;
+    float:left;
+}
+#map{
+    position: absolute;
+    z-index: 0;
+}
+.bottom .map .mapname{
+    height: auto;
+    margin-bottom:20rpx;
+}
+.bottom .map .mapname view.left{
+    float:left;
+    margin-top:20rpx;
+    margin-bottom:20rpx;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+
+}
+.bottom .map .mapname view.right{
+    float:right;
+    margin-top:50rpx;
+    margin-right:20rpx;
+}
+.bottom .map .mapname text{
+    display:block;
+    font-size:32rpx;
+    margin-left:20rpx;
+}
+.bottom .map .mapname text.spec{
+    color:#999;
+    font-size:28rpx;
+}
+.bottom .map .mapname image{
+    width:50rpx;
+    height: 50rpx;
+    display:block;
+    float:right;
+}
+.bottom .mapcontent{
+    width:100%;
+    float:left;
+    z-index: 0;
+}
+.bottom .areacommand{
+    width:100%;
+    border-top:20rpx solid #f2f2f2;
+}
+.area_buy_rent{
+    width:100%;
+    margin-bottom:20rpx;
+}
+.area_title{
+    width:99%;
+    display: block;
+    text-align: center;
+    border:#fff 1rpx solid;
+    height: 65rpx;
+   
+}
+.area_title .area_tobuy{
+    font-size:32rpx;
+    float:left;
+    width: 50%;
+    height: 65rpx;
+    display: block;
+    line-height: 65rpx;
+
+}
+.area_title .area_torent{
+    font-size:32rpx;
+    float:right;
+     width:50%;
+     height: 65rpx;
+     line-height: 65rpx;
+     display:block; 
+    
+} 
+.area_title .text{
+    color:#02A9FF;
+    border-bottom:#02A9FF 5rpx solid;
+}
+.area_content{
+    width:95%;
+    margin:auto;
+    height: 220rpx;
+    border-top:2rpx solid #eee;
+    padding-bottom: 10rpx;
+}
+.area_content .left{
+    width:29.5vw;
+    height: 174rpx;
+    margin-top:30rpx;
+    display: inline-block;
+}
+.goods_img{
+    width:220rpx;
+    height: 174rpx;
+}
+.area_content .right{
+    width:63vw;
+    margin-top:30rpx;
+    float:right;
+    height: 170rpx;
+    margin-bottom:5rpx;
+}
+.area_content .right .title{
+    width:63vw;
+    font-weight: bold;
+    font-size:26rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}     
+.area_content .right .desc{
+    width:63vw;
+    font-size:24rpx;
+    color:#999;
+    line-height: 45rpx;
+}
+.area_content .right .price{
+    float:right;
+    color:red;
+    font-weight: bold;
+    font-size:30rpx;
+}
+.area_content .right .address{
+    width:63vw;
+    font-size:24rpx;
+    color:#999;
+    line-height: 45rpx;
+}
+.area_content .right .address image{
+    width:40rpx;
+    height: 40rpx;
+    float:right;
+    margin-right: 10rpx;
+}
+.area_content .right .prop{
+    width:63vw;
+    
+    margin-top: 16rpx;
+}
+button{
+    box-sizing: none;
+}
+.area_content .right .prop text{
+    padding:0;
+    margin:0;
+    font-size:20rpx;
+    width: auto;
+    line-height: 33rpx;
+    margin-left:10rpx;
+    color:#BDE1C1;
+    float:left;
+    border-radius: 10rpx;
+    padding-left:8rpx;
+    padding-right:8rpx;
+}
+.area_content .right .prop text.prop1{
+    margin-left:0;
+    color:#ec843b;
+    background-color: #f5e1e3;
+}
+.area_content .right .prop text.prop2{
+    color:#2fc48d;
+    background-color:#e1f5ee;
+}   
+.area_content .right .prop text.prop3{
+    color:#f05858;
+    background-color:#f5e1e1;
+}
+.area_content .right .prop text.prop4{
+    color:#429de5;
+    background-color:#e1ecf5;
+}
+.nextbutton{
+    height:96rpx;
+    padding-top:20rpx;
+    padding-bottom:20rpx;
+    width:100%;
+    float:left;
+    position: fixed;
+    bottom:0;
+    z-index: 999999;
+    background-color: #fff;
+    }
+.nextbutton button{
+    width:47.5%;
+    height:92rpx;
+    float:left;
+    border:0;
+    border-radius:20rpx;
+    background-color:#02A9FF;
+    color:#fff;
+    text-align:center;
+    margin-bottom:10rpx;
+}
+.nextbutton .button1{
+     margin-left:2%;
+     margin-right:5rpx;
+    border-radius: 20rpx 0rpx 0rpx 20rpx;
+}
+.nextbutton .button2{
+    
+    margin-right:2%;
+    border-radius: 0rpx 20rpx 20rpx 0rpx;
+}
+.h200rpx{
+    width:100%;
+    height: 90rpx;
+}

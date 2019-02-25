@@ -1,0 +1,173 @@
+<view class="container">
+    <view class="choosetype">
+        <radio-group class="radio-group" bindchange="choosetype"  >
+            <label class="radio" wx:for="{{choosetype}}" wx:for-index="0" catchtap="change" >
+                <radio value="{{item.types}}" checked="{{item.checked}}" catchtap="change"/>{{item.types}}
+            </label>
+        </radio-group>
+    </view>
+    <block wx:if="{{choosegou == true}}" >
+    <view class="top">
+        <view class="topbg">
+            <view class="bg">
+                <view class="title">
+                    <text>{{title1}}</text>
+                </view>
+                <view class="content">
+                    <input placeholder="{{money1}}" class="shoujia" bindinput="shoujiatopinput"  placeholder-style='color:#ccc;font-size:28rpx;' value="{{shoujiatop}}"></input>
+                    <text style="float:left;">--</text>
+                    <input placeholder="{{money2}}" class="shoujia" bindinput="shoujiabottominput" placeholder-style='color:#ccc;font-size:28rpx;' value="{{shoujiabottom}}"></input>
+                    <text style="float:right;">{{content1}}</text>
+                </view>
+            </view>
+            <view class="bg">
+                <view class="title">
+                    <text>{{areas}}</text>
+                </view>
+                <view class="content">
+                    <input placeholder="{{mianji}}" class="mianji" bindinput='mianjiinput' placeholder-style='color:#ccc;font-size:28rpx;' value="{{mianjival}}"></input>
+                    <text style="float:right;">{{content4}}</text>
+                </view>
+            </view>
+             <view class="bg">
+                <view class="title">
+                    <text>{{title3}}</text>
+                </view>
+                <view class="content">
+                    <input placeholder="{{huxing}}" class="mianji" style="width:500rpx;" bindinput='huxingvalinput' placeholder-style='color:#ccc;font-size:28rpx;' value="{{huxingval}}"></input>
+                </view>
+            </view>
+             <view class="bg">
+                <view class="title">
+                    <text>{{floor}}</text>
+                </view>
+                <view class="content">
+                    <input placeholder="{{loucengplaceholder}}" class="mianji" bindinput="loucenginput" placeholder-style='color:#ccc;font-size:28rpx;' value="{{louceng}}"></input>
+                    <text style="float:right;">{{content13}}</text>
+                </view>
+            </view>
+            <view class="bg">
+                <view class="title">
+                    <text>{{district}}</text>
+                </view>
+                <view class="content">
+                    <input placeholder="{{districtplaceholder}}" class="mianji" style="width:500rpx;" bindinput="districtvalinput" placeholder-style='color:#ccc;font-size:28rpx;' value="{{districtval}}"></input>
+                </view>
+            </view>
+        </view>
+    </view>
+    </block>
+    <block wx:if="{{qiuzu == true}}">
+    <view class="top" >
+        <view class="topbg">
+             <view class="bg">
+                <view class="title">
+                    <text>租金</text>
+                </view>
+                <view class="content">
+                    <input placeholder="{{money3}}" bindinput="zujintopinput" value="{{zujintop}}" placeholder-style='color:#ccc;font-size:28rpx;' style="width:110rpx;"></input>
+                    <text style="float:left;">--</text>
+                    <input placeholder="{{money4}}" bindinput="zujinbottominput" value="{{zujinbottom}}" placeholder-style='color:#ccc;font-size:28rpx;' style="width:110rpx;"></input>
+                    <text style="float:right;">元/月</text>
+                </view>
+            </view>
+            <view class="bg">
+                <view class="title">
+                    <text>{{areas}}</text>
+                </view>
+                <view class="content">
+                    <input placeholder="{{mianji}}" bindinput="mianjivalinput" class="mianji" placeholder-style='color:#ccc;font-size:28rpx;' value="{{mianjival}}"></input>
+                    <text style="float:right;">{{content4}}</text>
+                </view>
+            </view>
+           <view class="bg">
+                <view class="title">
+                    <text>{{title3}}</text>
+                </view>
+                <view class="content">
+                    <input placeholder="{{huxing}}" class="mianji" style="width:500rpx;" bindinput='huxingvalinput' placeholder-style='color:#ccc;font-size:28rpx;' value="{{huxingval}}"></input>
+                </view>
+            </view>
+             <view class="bg">
+                <view class="title">
+                    <text>{{district}}</text>
+                </view>
+                <view class="content">
+                    <input placeholder="{{districtplaceholder}}" class="mianji" style="width:500rpx;" bindinput="districtvalinput" placeholder-style='color:#ccc;font-size:28rpx;' value="{{districtval}}"></input>
+                </view>
+            </view>
+            <view class="bg">
+                <view class="title">
+                    <text>{{title8}}</text>
+                </view>
+                <view class="content" catchtap="selectdeployd">
+                    <text>{{content15}}</text>
+                    <image src="{{rightimgurl}}"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</block>
+<view class="clear"></view>
+<view class="top">
+        <view class="topbg">
+            <view class="bg">
+                <view class="title">
+                    <text>{{title4}}</text>
+                </view>
+                <view class="content">
+                    <input type="text" class="contactnameinput" placeholder="{{contactname}}" placeholder-style='color:#ccc;font-size:28rpx;' bindinput="getcontactname" value="{{contactnamevalue}}"></input>
+                    <radio-group class="radio-group" bindchange="contactchange">
+                        <label class="radio" wx:for="{{contactchange}}">
+                            <radio value="{{item.sex}}" checked="{{item.checked}}"/>{{item.sex}}
+                        </label>
+                    </radio-group>
+                </view>
+            </view>
+            <view class="bg">
+                <view class="title">
+                    <text>{{title5}}</text>
+                </view>
+                <view class="content phone">
+                    <input type="number" class="phonenumber" placeholder-style='color:#ccc;font-size:28rpx;' bindinput="phonenumbervalinput" placeholder="{{phonenumber}}" value="{{phonenumberval}}"></input>
+                    <view class="phoneview" catchtap="getcode"><text class="phonenumbertext">{{content5}}</text></view>
+                </view>
+            </view>
+            <view class="bg">
+                <view class="title">
+                    <text>{{codetitle}}</text>
+                </view>
+                <view class="content">
+                    <input type="number" class="code" placeholder="{{code}}" placeholder-style='color:#ccc;font-size:28rpx;' value=""></input>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="center" wx:if="{{choosegou == true}}">
+        <button catchtap="nextgou">提交</button>
+    </view> 
+    <view class="center" wx:if="{{qiuzu == true}}">
+        <button catchtap="nextzu">提交</button>
+    </view> 
+</view>
+
+
+<!-- 遮盖层 -->
+<view class="zhegaiceng" wx:if="{{zhegaicengflag == true}}"></view>
+
+<!--求租-->
+<!-- 点击显示希望屋内配置 -->
+<view class="showdeployd" wx:if="{{selectdeploydflag == true}}">
+    <view class="title">
+        <view class="titleleft" catchtap="cancelbutton">
+            <text>取消</text>
+        </view>
+    </view>
+    <view class="clear"></view>
+    <view class="deploydcontent">
+        <view wx:for="{{datas12}}" wx:key="datas12" data-id="{{index}}" catchtap="selectdeploydata">
+            <text>{{item}}</text>
+        </view>
+    </view>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+</view>
+

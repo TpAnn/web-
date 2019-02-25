@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<title>a</title>  
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">  
+<!-- 需要的文件不再多嘴 -->  
+<link rel="stylesheet" href="jqmobile/jquery.mobile-1.4.5.css">  
+<script src="jqmobile/jquery-1.11.1.js"></script>  
+<script src="jqmobile/jquery.mobile-1.4.5.js"></script>  
+  
+</head>  
+  
+<body>  
+<!-- 必须此页命名，否则下面的jquerymobile滑动手势控制不到，不起作用 -->  
+<div data-role="page" data-position="fixed" data-fullscreen="true" id="mypage">  
+  <div data-role="header" data-theme="b" data-tap-toggle = "false">  
+    <h1>Title</h1>  
+  
+  </div>  
+<!-- html部分很简单，就在content中布局4个图层，其中div1一开始显示，其余隐藏即好，之所以把“你好”二字设置得大大的，是由于jquerymobile的滑动必须滑到图层内的非空白部分，即使你设置了width:100%; height:100% -->  
+  <div data-role="content">  
+      <div id="div1">  
+        <h1>你好1</h1>  
+      </div>  
+      <div id="div2" style="display:none;">  
+        <h1>你好2</h1>  
+      </div>  
+      <div id="div3" style="display:none;">  
+        <h1>你好3</h1>  
+      </div>  
+      <div id="div4" style="display:none;">  
+        <h1>你好4</h1>  
+      </div>  
+      <!-- 此乃记录翻到那一页的图层，有一个名叫divnumber的行内文本 -->  
+      <div>  
+        <span id="divnumber"></span><span>/4</span>  
+      </div>  
+  </div>  
+  
+  <div data-role="footer" data-position="fixed" data-fullscreen="true"  data-theme="b" data-tap-toggle = "false">  
+      <div data-role="navbar">  
+      <ul>  
+        <li><a href="#" class="ui-btn-active ui-state-persist" data-icon="info">a</a></li>  
+        <li><a href="#" target="_self" data-icon="grid">b</a></li>  
+        <li><a href="#" target="_self" data-icon="star">c</a></li>  
+      </ul>  
+    </div>  
+      
+  </div>   
+</div>  
+
+</body>  
+</html>  
+<script>  
+    
+    /* jquery部分，先定义一个记录翻到多少页的变量 */  
+    var divnum=1;  
+    /* 相当于.innerhtml=""; jquery设置一个节点的值是需要这样设定的 */  
+    $("#divnumber").text(divnum)  
+    /* 在#mypage页面开启触控 */  
+    $(document).on("pageinit","#mypage",function(){  
+        /* 如果对div1的非空白部分向左滑，那么div1就隐藏，div2就显示，同时页面计数器+1，并更新divnumber这个行内文本 */  
+        $("#div1").on("swipeleft",function(){  
+             $("#div1").hide("fast");  
+             $("#div2").show("fast");  
+             divnum=divnum+1;  
+             $("#divnumber").text(divnum)  
+        });  
+        /* 如果对div2的非空白部分向右滑，那么div1就显示，div2就隐藏，同时页面计数器-1，并更新divnumber这个行内文本 */  
+         $("#div2").on("swiperight",function(){  
+             $("#div1").show("fast");  
+             $("#div2").hide("fast");  
+             divnum=divnum-1;  
+             $("#divnumber").text(divnum)  
+        });  
+        /* 如果对div2的非空白部分向左滑，那么div2就隐藏，div3就显示，同时页面计数器+1，并更新divnumber这个行内文本，下面如此类推 */  
+        $("#div2").on("swipeleft",function(){  
+             $("#div2").hide("fast");  
+             $("#div3").show("fast");  
+             divnum=divnum+1;  
+             $("#divnumber").text(divnum)  
+        });  
+        $("#div3").on("swiperight",function(){  
+             $("#div2").show("fast");  
+             $("#div3").hide("fast");  
+             divnum=divnum-1;  
+             $("#divnumber").text(divnum)  
+        });  
+        $("#div3").on("swipeleft",function(){  
+             $("#div3").hide("fast");  
+             $("#div4").show("fast");  
+             divnum=divnum+1;  
+             $("#divnumber").text(divnum)  
+        });  
+         $("#div4").on("swiperight",function(){  
+             $("#div3").show("fast");  
+             $("#div4").hide("fast");  
+             divnum=divnum-1;  
+             $("#divnumber").text(divnum)  
+        });                            
+    });  
+</script>

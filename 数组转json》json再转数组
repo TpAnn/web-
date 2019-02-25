@@ -1,0 +1,357 @@
+<script type="text/javascript">
+var flag = false; // 一个状态标记，记录需要进行的脚本是否执行过
+// 用来检查的函数
+function check(){
+    // 如果脚本已执行过，则退出，避免重复执行。
+    if (flag) return;
+
+    // 尝试获取 {{data.content}} 中的 “标识”
+    var obj = document.getElementById('a_special_id'); 
+
+    // 如果获取成功，说明代码已经完成载入
+    if (obj) {
+        // 这里放上你想要进行的操作，例如你问题中的：
+        jQuery(document).ready(function() {
+            $('.goreply').click(function(){ 
+                var id = $(this).attr("id");
+                $('#'+id).next().next("div.fui-page").find("div.pingluncontaniner").css("height","575px")
+                $('#'+id).next().next("div.fui-page").find("#pinglu-conatiner").css("display","block");
+            });
+        }); 
+        // 设置状态标记，避免脚本重复执行
+        flag = true;
+    } else {
+    // 如果代码没有完成载入
+    // 设置定时器，过一段时间再次检查
+    setTimeout(check, 100);
+    }
+}
+
+// 开始检查
+$(function(){
+check();
+});
+
+</script>
+<link rel="stylesheet" href="../addons/ewei_shopv2/plugin/sns/template/mobile/default/images/swiper.min.css"/>
+<script type="text/javascript" src="../addons/ewei_shopv2/plugin/sns/template/mobile/default/images/swiper.min.js"></script>
+<style type="text/css">
+    .alert{
+        height:100%;
+        width: 100%; 
+        background-color: #fff;  
+        position: fixed; 
+        z-index: 9999;
+        top:0px;
+        left: 0px;
+        padding:0px;
+    }
+     .cleart{
+        float: left;
+        color:#666;
+        font-size: 16px;
+     }
+
+     .hf_title{
+        width: 89%;
+        height:35px;
+        line-height: 35px;
+        position: absolute;
+        top:0px;
+        left:20px;
+        z-index: 9999999;
+        background: #fff;
+
+     }
+     .text{
+        float:right;
+        width: 85%;
+        margin-top:-50px;
+     }
+     .subtitle{
+      float: left;
+      padding-left: 55px;
+     }
+     .title{
+      margin-left: -8px;
+      color:#333;
+      margin-top:-10px;
+     }
+     .fui-card .fui-card-btns{
+       padding: .3rem .5rem;
+     }
+     .fui-card{
+      border-top:#eee 1px solid;
+     }
+     .fui-card .fui-card-content{
+        padding: 0 0 0 0.3rem;
+     }
+     .fui-card .fui-card-info span{
+        padding:0 0 0 0.3rem;
+     }
+    
+     .bo_top{
+      border-top: #eee 1px solid
+     }
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+
+    }
+    .swiper-wrapper{
+        border:red 1px solid;
+        width: 82%;
+        height: 80%;
+        background: blue;
+        position: absolute; 
+        left: 50%;
+        top:10%;
+        transform: translate(-50%);
+    }
+</style>
+<div class="alert">
+     <div class="swiper-container">
+          <div class="swiper-wrapper" style="">
+               <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide">Slide 4</div>
+              <div class="swiper-slide">Slide 5</div>
+              <div class="swiper-slide">Slide 6</div>
+              <div class="swiper-slide">Slide 7</div>
+              <div class="swiper-slide">Slide 8</div>
+              <div class="swiper-slide">Slide 9</div>
+              <div class="swiper-slide">Slide 10</div>
+          </div>
+          
+          <!-- Add Pagination -->
+         <!--  <div class="swiper-pagination"></div> -->
+          <!-- Add Navigation -->
+         <!--  <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div> -->
+      </div>
+
+
+</div>
+
+
+<script type="text/html" id="tpl_board_post_list">
+    <%each list as row%>
+    <div class="fui-card fui-card-list fui-card-full post-card sns-card-list">
+
+        <a class='fui-card-info bo_top'  data-nocache='true' href='{php echo mobileUrl('sns/post')}&id=<%row.id%>'>
+        <div class='image' >
+            <img data-lazy='<%row.avatar%>'  />
+        </div>
+        <div class="text" style="border:none">
+            <span class="title" ><%row.nickname%></span>
+            <a  class="fui-card-content"  data-nocache='true' href="{php echo mobileUrl('sns/post')}&id=<%row.id%>">
+            <%if row.title%>
+           
+           <!--  b class="fui-card-content-title">
+            <%if row.isbest==1 || row.isboardbest==1%><span class="fui-label fui-label-warning">精</span><%/if%>
+            <%row.title%>
+        </b><%/if%> -->
+            <div class="sns-content-info" >
+                <div class="sns-content-info-sub">
+                    <%=row.content%>
+                </div>
+            </div>
+        </a>
+        <i class="sns-card-show" style="">全文</i>
+            
+        </div>
+
+        </a>
+  <!--删除开始-->
+           <!--  <%if row.openid_this==row.openid %>
+            <a href="javascript:void(0);" style="float: right;margin:10px 10px 0 0 ;font-size: 14px; background: #00b33b;color:#fff; border:none; padding:2px 5px 2px 5px;" onclick="deletel(<%row.id%>)" class="delete1">删除</a>
+            <%/if%> -->
+            <!--删除结束-->
+        <!--../app/index.php?i=1&c=entry&m=ewei_shopv2&do=mobile&r=sns.post&$id=1#sns-board-reply-page&-->
+        
+        <%if row.images.length>0%>
+        <a class="fui-card-images"   style="padding-left:65px; width: 100%;"  data-nocache='true' href="">
+            <%each row.images as img%>
+            <img style="background-image:url('<%img%>'); width:40%; margin-right:5px; margin-bottom: 5px;" onclick="Img()"   />
+            <%/each%>
+        </a>
+        <%/if%>
+
+        <div class='fui-card-btns' style="border: none">
+          <span class="subtitle" ><%row.createtime%></span>
+            <a data-nocache='true' ><i class="icon icon-comment"></i> (<%row.postcount%>)</a>
+        </div>
+    </div>
+    <div style="width: 100%; background: #fff; margin-top:-10px;position: relative; " >
+     <%each row.rp as li%>
+           
+            <div class="link" id="goreply<% li.id %>" onclick="men(<% li.id%>,<%=row.bid%>,<% row.id %>);" style="background: #f9f9f9;  width: 73%; margin-left:55px; padding-left:10px; margin-right: 20px; font-size: 14px; ">
+                 <span style="color:blue" class="name"><% li.nickname%></span>
+                 <span style="  color:#333"><%=li.content%></span>
+                
+                 <div style="width: 100%; color:#333; font-size: 14px">      
+                       <%each li.rrp as rr%>
+                            <span style="color:blue;font-size: 14px" ><%rr.nickname%>:</span>
+                            <span>回复</span>
+                            <span style="color:blue; font-size: 14px" class="replyname" ><%li.nickname%>：</span>
+                            <span><%=rr.content%> </span>
+                           
+                            <br>
+                      <%/each%>
+                  </div>
+             </div>
+             <span id="a_special_id"></span>
+           
+          <%/each%>
+
+    <%/each%>
+    </div>
+    
+</script>
+<script src="swiper.min.js"></script>
+<script type="text/javascript">
+    function Img(){
+     $(".alert").show();
+     var back = $(tjos).css('backgroundImage');
+      back.substring(0,0);
+      console.log(back);
+    }
+    $('.alert').click(function(){
+        $(this).hide();
+    });
+    $('.swiper-wrapper').click(function(event){
+        event.stopPropagation();
+    });
+
+    Swiper.prototype.plugins.debugger = function (swiper, params) {
+        if (!params) return;
+        // Need to return object with properties that names are the same as callbacks
+        return {
+            onInit: function (swiper){
+                console.log('onInit');
+            },
+            onClick: function (swiper, e) {
+                console.log('onClick');
+            },
+            onTap: function (swiper, e) {
+                console.log('onTap');
+            },
+            onDoubleTap: function (swiper, e) {
+                console.log('onDoubleTap');
+            },
+            onSliderMove: function (swiper, e) {
+                console.log('onSliderMove');
+            },
+            onSlideChangeStart: function (swiper) {
+                console.log('onSlideChangeStart');
+            },
+            onSlideChangeEnd: function (swiper) {
+                console.log('onSlideChangeEnd');
+            },
+            onTransitionStart: function (swiper) {
+                console.log('onTransitionStart');
+            },
+            onTransitionEnd: function (swiper) {
+                console.log('onTransitionEnd');
+            },
+            onReachBeginning: function (swiper) {
+                console.log('onReachBeginning');
+            },
+            onReachEnd: function (swiper) {
+                console.log('onReachEnd');
+            }
+        };
+    };
+
+     var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        // Enable debugger
+        debugger: true
+    });
+
+   
+
+
+   
+    function men(q,w,e){
+    window.location.href = "../app/index.php?i=1&c=entry&m=ewei_shopv2&do=mobile&r=sns.board&id="+w+"&pid="+e+"&rpid="+q+"#sns-board-post-page";
+       $(".tijiao").attr({
+        "data-name":e,
+        "data-id":w,
+        "name":q
+       });
+
+    }
+
+    //回复
+    function sub(e){
+        $(".alert").hide();
+        var str = $.trim($("#str").val());
+        var  pid = e.getAttribute("data-name");
+        var  bid = e.getAttribute("data-id");
+        var  rpid = e.getAttribute("name");
+        var  content = $('#content1').val()
+      //alert(content)
+
+        var data = {};
+        data['rpid'] = rpid;
+        data['bid'] = bid;
+        data['pid'] = pid;
+        data['content'] = content; 
+       // console.log(data);
+
+     $.ajax({
+              url:"http://hlz.jpyk1688.com/hlz/app/index.php?i=1&c=entry&m=ewei_shopv2&do=mobile&r=sns.post.reply", 
+              type:"POST", 
+              dataType:"json", 
+              data:data,
+              success:function(result){ 
+                console.log(result);
+                /*var msg = ret.result.checked == '1' ? '投诉提交成功!' : '投诉提交成功，请等待审核!';
+                FoxUI.alert(msg, '提示', function() {
+                $('#content').val('');*/
+              }
+        }); 
+    
+    }
+
+    function deletel(id){
+        $.ajax({
+        url:"../app/index.php?i=1&c=entry&m=ewei_shopv2&do=mobile&r=sns.post.deletel&id="+id,
+        type:"POST",
+        dataType:"json",
+        //data:{'id':id},
+        success:function(result){
+        alert('删除成功！');
+        }
+
+
+        });
+    }
+// <!------------------------------删除结束---------------------------------->
+    
+</script>
+

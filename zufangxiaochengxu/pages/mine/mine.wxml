@@ -1,0 +1,153 @@
+<view class="container">
+    <view class="top">
+        <view class="headpic">
+              <image src="{{avatarUrl}}"></image>
+        </view>
+        <view class="right">
+            <view class="name">
+                <text>{{name}}</text>
+            </view>
+            <view class="welcome">
+                <text>欢迎回家，您辛苦了！</text>
+            </view>
+        </view>
+    </view>
+    <view class="center" wx:if="{{publicedrooms == true}}">
+        <view class="message">
+            <text>你已发布了1套房源，已有10人次查看房源</text>
+        </view>
+        <view class="publicedroom">
+            <view class="area_content" catchtap="showdetails">
+                <view class="left">
+                    <image class="goods_img" src="{{goods_img}}"></image>
+                </view>
+                <view class="right">
+                    <view class="title">
+                        <text>{{title}}</text>
+                    </view>
+                    <view class="desc">
+                        <text>{{desc}}</text>
+                         <!--<button class="bianji" catchtap="bianji">编辑</button> -->
+                    </view>
+                    <view class="address">
+                        <text>{{address}}</text>
+                        <!--<button class="fenxiang" open-type="share">分享</button>-->
+                    </view> 
+                    <view class="prop">
+                        <text style="color:red;font-size:28rpx;margin-left:0;padding-left:0;">该房源暂{{status}}</text>
+                    </view>   
+                </view>
+            </view>
+            <view class="showinfo">
+                <view class="infodetail infodetail1">
+                    <view class="margin-top">
+                        <text class="value">{{price}}</text>
+                    </view>
+                    <view>
+                        <text class="shoujia">{{pricetext}}</text>
+                    </view>
+                </view>
+                <view class="infodetail">
+                    <view class='margin-top'>
+                        <text class="value">{{huxing}}</text>
+                    </view>
+                    <view>
+                        <text class="fangxing">房型</text>
+                    </view>
+                </view>
+                <view class="infodetail">
+                    <view class='margin-top'>
+                        <text class="value">{{mianji}}平方</text>
+                    </view>
+                    <view>
+                        <text class="jianzhu">建筑面积</text>
+                    </view>
+                </view>
+                <view class="infodetail">
+                     <view>
+                        <button class="fenxiang" catchtap="delet">删除</button>
+                    </view>
+                    <view>
+                        <button class="bianji" catchtap="bianji">编辑</button>
+                    </view>
+                    <view>
+                        <button class="fenxiang share" open-type="share">分享</button>
+                    </view>
+                    
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="center" wx:if="{{publicedrooms == false}}" style="height:80rpx;line-height:80rpx;font-size:28rpx;text-align:center;">
+        <text>暂无发布房源!</text>
+    </view> 
+    <view class="clear"></view>
+    <view class="bottom">
+        <view class="topcontent">
+            <view catchtap="mypublic">
+                <image src="/images/mypublic.png"></image>
+                <text>我的发布</text>
+            </view>
+            <view class="twohandsroom" data-id="0" catchtap="my_tracks">
+                <image src="/images/foont.png"></image>
+                <text>浏览记录</text>
+            </view>
+            <view class="rentroom" data-id="1" catchtap="my_collect">
+                <image src="/images/wodeshoucang.png"></image>
+                <text>我的收藏</text>
+            </view>
+            <view catchtap="qiugouqiuzu">
+                <image src="/images/qiuzuqiugou.png"></image>
+                <text>我的求租/求购</text>
+            </view>
+        </view>
+        <view class="clear"></view>
+        <view class="services">
+            <text>社区服务中心</text>
+        </view>
+        <view class="clear"></view>
+        <view class="centercontent">
+            <view class="centertop">
+                <view class="jiazheng" catchtap="jiazheng">
+                    <image src="/images/jiazheng.png"></image>
+                    <text>家政清洁</text>
+                </view>
+                <view class="jiadian" catchtap="jiadian">
+                    <image src="/images/jiadian.png"></image>
+                    <text>家电清洁</text>
+                </view>
+                <view class="weixiu" catchtap="shutongweixiu">
+                    <image src="/images/weixiu.png"></image>
+                    <text>疏通维修</text>
+                </view>
+                <view class="shutong" catchtap="xiyi">
+                    <image src="/images/shutong.png"></image>
+                    <text>洗衣</text>
+                </view>
+            </view>
+            <view class="clear"></view>
+            <view class="centertop"> 
+                <view class="xianhua" catchtap="kaisuo">
+                    <image src="/images/xianhua.png"></image>
+                    <text>开锁配匙</text>
+                </view>
+                <view class="songshui" catchtap="songshui">
+                    <image src="/images/songshui.png"></image>
+                    <text>送水</text>
+                </view>
+                <view class="muying" catchtap="banjia">
+                    <image src="/images/muying.png"></image>
+                    <text>搬家运输</text>
+                </view>
+                <view class="xiushouji" catchtap="feijiu">
+                    <image src="/images/xiushouji.png"></image>
+                    <text>废旧回收</text>
+                </view>
+            </view>
+        </view>
+        <view class="clear"></view>
+        <view class="bottomcontent">
+            <button catchtap="contactkefu">联系客服中心</button>
+        </view>
+    </view>
+</view>
